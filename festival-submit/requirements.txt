@@ -1,0 +1,6 @@
+# Festival Submit - Festival Submission Automation System
+# Python 3.9+
+
+# TOML configuration file parsing
+# (Only needed for Python < 3.11; built-in as tomllib in 3.11+)
+tomli>=2.0.0,<3.0.0; python_version < "3.11"

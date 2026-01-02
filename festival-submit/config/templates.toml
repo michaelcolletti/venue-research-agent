@@ -1,0 +1,142 @@
+# Festival Submit - Templates
+[templates.festival_submission_standard]
+name = "Standard Festival Submission"
+subject = "{act_name} - Submission for {festival_name}"
+body = """
+Dear {festival_name} Programming Team,
+
+I am writing to submit {act_name} for consideration at {festival_name}.
+
+{bio_short}
+
+**Performance Details:**
+- Genres: {genres}
+- Set Lengths: {set_lengths}
+- Members: {members}
+
+**Links:**
+- Website: {website}
+- EPK: {epk_url}
+- Instagram: {instagram}
+
+Thank you for your consideration.
+
+Best regards,
+{contact_name}
+{contact_email}
+"""
+
+[templates.festival_submission_jazz]
+name = "Jazz Festival Submission"
+subject = "{act_name} - Jazz Festival Submission"
+body = """
+Dear {festival_name} Artistic Director,
+
+I am pleased to submit {act_name} for consideration.
+
+{bio_short}
+
+**Ensemble:**
+- {members} musicians
+- Instrumentation: {instruments}
+- Set lengths: {set_lengths}
+
+**Links:**
+- EPK: {epk_url}
+- Website: {website}
+
+With appreciation,
+{contact_name}
+{contact_email}
+"""
+
+[templates.festival_submission_irish]
+name = "Irish/Celtic Festival Submission"
+subject = "{act_name} - Submission for {festival_name}"
+body = """
+Dear {festival_name} Entertainment Committee,
+
+Sláinte! I am pleased to submit {act_name} for consideration.
+
+{bio_short}
+
+**What We Offer:**
+- Traditional and fusion concert sets
+- Interactive session-style performances
+- Educational workshops
+
+**Details:**
+- Musicians: {members}
+- Instruments: {instruments}
+- Set lengths: {set_lengths}
+
+Go raibh maith agat,
+{contact_name}
+{contact_email}
+"""
+
+[templates.festival_submission_latin]
+name = "Latin Jazz Submission"
+subject = "{act_name} - Latin Jazz Submission"
+body = """
+Dear {festival_name} Programming Team,
+
+I am excited to submit {act_name} for consideration.
+
+{bio_short}
+
+**Ensemble Details:**
+- {members} musicians with full percussion section
+- Instrumentation: {instruments}
+- Set lengths: {set_lengths}
+
+**Links:**
+- EPK: {epk_url}
+- Website: {website}
+
+¡Gracias!
+{contact_name}
+{contact_email}
+"""
+
+[templates.festival_submission_fusion]
+name = "Fusion/Prog Submission"
+subject = "{act_name} - Fusion Submission"
+body = """
+Dear {festival_name} Booking Team,
+
+I am submitting {act_name} for consideration.
+
+{bio_short}
+
+**Performance Specs:**
+- {members} musicians
+- Instrumentation: {instruments}
+- Set lengths: {set_lengths}
+
+**Links:**
+- EPK: {epk_url}
+- Bandcamp: {bandcamp}
+
+Best regards,
+{contact_name}
+{contact_email}
+"""
+
+[templates.followup_initial]
+name = "Initial Follow-up"
+subject = "Following Up: {act_name} Submission"
+body = """
+Dear {festival_name} Team,
+
+I wanted to follow up on my submission of {act_name}, sent on {submission_date}.
+
+Please let me know if you need any additional materials.
+
+- EPK: {epk_url}
+- Website: {website}
+
+Thank you,
+{contact_name}
+{contact_email}
+"""

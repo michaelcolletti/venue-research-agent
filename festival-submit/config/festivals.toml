@@ -1,0 +1,211 @@
+# Festival Submit - Festivals Database
+[settings]
+submit_days_before_deadline = 14
+search_frequency = "weekly"
+
+# LOCAL FESTIVALS
+[festivals.local.woodstock_invitational]
+name = "Woodstock Invitational"
+location = "Woodstock, NY"
+distance_miles = 0
+dates_typical = "October"
+duration_days = 3
+genre_focus = ["acoustic", "folk", "americana"]
+estimated_attendance = 3000
+stages = 2
+website = "https://woodstockinvitational.com"
+submission_deadline_typical = "July 1"
+submission_fee = 0
+pay_range = "$300-800"
+suitable_acts = ["solo_acoustic", "colletti"]
+
+[festivals.local.opus40]
+name = "Opus 40 Summer Series"
+location = "Saugerties, NY"
+distance_miles = 12
+dates_typical = "June-September"
+duration_days = 1
+genre_focus = ["all genres"]
+estimated_attendance = 500
+stages = 1
+website = "https://opus40.org"
+submission_deadline_typical = "March"
+submission_fee = 0
+pay_range = "$500-1500"
+suitable_acts = ["tree_of_life_trio", "solo_acoustic", "tillson_jazz_ensemble", "colletti"]
+
+[festivals.local.kingston_jazz]
+name = "Kingston Jazz Festival"
+location = "Kingston, NY"
+distance_miles = 15
+dates_typical = "August"
+duration_days = 1
+genre_focus = ["jazz", "blues", "soul"]
+estimated_attendance = 2000
+stages = 2
+submission_deadline_typical = "April"
+submission_fee = 0
+pay_range = "$500-1500"
+suitable_acts = ["tree_of_life_trio", "tillson_jazz_ensemble", "pablo_shine"]
+
+# REGIONAL FESTIVALS
+[festivals.regional.saratoga_jazz]
+name = "Freihofer's Saratoga Jazz Festival"
+location = "Saratoga Springs, NY"
+distance_miles = 95
+dates_typical = "Late June"
+duration_days = 2
+genre_focus = ["jazz", "blues", "R&B", "soul"]
+estimated_attendance = 25000
+stages = 3
+website = "https://spac.org"
+submission_deadline_typical = "January"
+submission_fee = 0
+pay_range = "$2000-15000"
+suitable_acts = ["tree_of_life_trio", "full_band", "tillson_jazz_ensemble", "pablo_shine"]
+priority = "high"
+
+[festivals.regional.clearwater]
+name = "Clearwater Festival"
+location = "Croton-on-Hudson, NY"
+distance_miles = 70
+dates_typical = "June"
+duration_days = 2
+genre_focus = ["folk", "world", "environmental"]
+estimated_attendance = 15000
+stages = 7
+website = "https://clearwaterfestival.org"
+submission_deadline_typical = "January"
+submission_fee = 0
+pay_range = "$300-2000"
+suitable_acts = ["solo_acoustic", "tree_of_life_trio", "mcgroovin"]
+priority = "high"
+
+[festivals.regional.irish_fest_durham]
+name = "Irish Festival East Durham"
+location = "East Durham, NY"
+distance_miles = 45
+dates_typical = "May"
+duration_days = 3
+genre_focus = ["irish", "celtic"]
+estimated_attendance = 8000
+stages = 3
+submission_deadline_typical = "February"
+submission_fee = 0
+pay_range = "$500-2000"
+suitable_acts = ["mcgroovin"]
+priority = "high"
+
+[festivals.regional.philly_folk]
+name = "Philadelphia Folk Festival"
+location = "Schwenksville, PA"
+distance_miles = 150
+dates_typical = "August"
+duration_days = 4
+genre_focus = ["folk", "singer-songwriter", "world"]
+estimated_attendance = 12000
+stages = 6
+website = "https://folkfest.org"
+submission_deadline_typical = "February"
+submission_fee = 25
+pay_range = "$500-3000"
+suitable_acts = ["solo_acoustic", "mcgroovin"]
+priority = "high"
+
+# NATIONAL FESTIVALS
+[festivals.national.rochester_jazz]
+name = "Rochester International Jazz Festival"
+location = "Rochester, NY"
+distance_miles = 280
+dates_typical = "June"
+duration_days = 9
+genre_focus = ["jazz"]
+estimated_attendance = 200000
+stages = 20
+website = "https://rochesterjazz.com"
+submission_deadline_typical = "November"
+submission_fee = 0
+pay_range = "$500-10000"
+suitable_acts = ["tree_of_life_trio", "tillson_jazz_ensemble", "cloudburst", "nail_thump_flow", "pablo_shine"]
+priority = "high"
+
+[festivals.national.detroit_jazz]
+name = "Detroit Jazz Festival"
+location = "Detroit, MI"
+distance_miles = 600
+dates_typical = "Labor Day Weekend"
+duration_days = 4
+genre_focus = ["jazz"]
+estimated_attendance = 300000
+stages = 5
+website = "https://detroitjazzfest.org"
+submission_deadline_typical = "January"
+submission_fee = 0
+pay_range = "$1000-15000"
+suitable_acts = ["tree_of_life_trio", "tillson_jazz_ensemble", "cloudburst", "nail_thump_flow", "pablo_shine"]
+priority = "high"
+
+[festivals.national.milwaukee_irish]
+name = "Milwaukee Irish Fest"
+location = "Milwaukee, WI"
+distance_miles = 850
+dates_typical = "August"
+duration_days = 4
+genre_focus = ["irish", "celtic"]
+estimated_attendance = 100000
+stages = 16
+website = "https://irishfest.com"
+submission_deadline_typical = "January"
+submission_fee = 0
+pay_range = "$1000-5000"
+suitable_acts = ["mcgroovin"]
+priority = "high"
+
+[festivals.national.new_orleans_jazz]
+name = "New Orleans Jazz & Heritage Festival"
+location = "New Orleans, LA"
+distance_miles = 1350
+dates_typical = "April-May"
+duration_days = 7
+genre_focus = ["jazz", "blues", "R&B", "funk", "soul"]
+estimated_attendance = 400000
+stages = 12
+website = "https://nojazzfest.com"
+submission_deadline_typical = "September"
+submission_fee = 0
+pay_range = "$2000-50000+"
+suitable_acts = ["tree_of_life_trio", "full_band", "pablo_shine"]
+priority = "aspirational"
+
+# INTERNATIONAL FESTIVALS
+[festivals.international.montreal_jazz]
+name = "Montreal Jazz Festival"
+location = "Montreal, QC, Canada"
+distance_miles = 350
+dates_typical = "June-July"
+duration_days = 10
+genre_focus = ["jazz", "world", "soul", "funk"]
+estimated_attendance = 2000000
+stages = 10
+website = "https://montrealjazzfest.com"
+submission_deadline_typical = "November"
+submission_fee = 0
+pay_range = "$2000-25000"
+suitable_acts = ["tree_of_life_trio", "full_band", "tillson_jazz_ensemble", "cloudburst", "pablo_shine"]
+priority = "high"
+
+[festivals.international.celtic_connections]
+name = "Celtic Connections"
+location = "Glasgow, Scotland"
+distance_miles = 3300
+dates_typical = "January"
+duration_days = 18
+genre_focus = ["celtic", "folk", "world"]
+estimated_attendance = 100000
+stages = 20
+website = "https://celticconnections.com"
+submission_deadline_typical = "July"
+submission_fee = 0
+pay_range = "£500-5000"
+suitable_acts = ["mcgroovin"]
+priority = "high"

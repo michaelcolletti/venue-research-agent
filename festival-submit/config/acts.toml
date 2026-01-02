@@ -1,0 +1,418 @@
+# Festival Submit - Artist/Act Configuration
+[settings]
+default_contact_name = "Michael Colletti"
+default_contact_email = "booking@example.com"
+default_contact_phone = "(845) 555-0100"
+track_submissions = true
+reminder_days_before_deadline = [30, 14, 7, 3, 1]
+auto_followup_days = 14
+home_base = "Woodstock, NY"
+home_zip = "12498"
+
+# TREE OF LIFE TRIO
+[acts.tree_of_life_trio]
+name = "Tree of Life Trio"
+tagline = "Jazz, Soul, and Funk from the Hudson Valley"
+genres = ["jazz", "soul", "funk", "R&B"]
+subgenres = ["contemporary jazz", "nu-soul"]
+active = true
+members = 3
+member_names = ["Michael Colletti", "Scott Brown", "Amit Shamir"]
+instruments = ["piano/keys", "bass", "drums"]
+year_formed = 2020
+hometown = "Woodstock, NY"
+set_lengths = [45, 60, 90, 120]
+min_stage_width = 12
+min_stage_depth = 8
+power_requirements = "Two 20A circuits"
+backline_needs = ["keyboard amp or DI", "bass amp", "drum kit"]
+sound_check_time = 30
+bio_short = "Tree of Life Trio brings sophisticated jazz, soul, and funk from the Hudson Valley."
+bio_long = "Tree of Life Trio is a dynamic jazz ensemble combining improvisational spirit with infectious grooves."
+
+[acts.tree_of_life_trio.fees]
+local = { min = 500, target = 1000, max = 1500 }
+regional = { min = 1000, target = 2000, max = 3000 }
+national = { min = 2500, target = 4000, max = 6000 }
+international = { min = 5000, target = 8000, max = 15000 }
+
+[acts.tree_of_life_trio.travel]
+requires_flights_over = 400
+hotel_rooms_needed = 2
+per_diem_per_person = 75
+
+[acts.tree_of_life_trio.assets]
+website = "https://treeoflifetrio.com"
+epk_url = "https://treeoflifetrio.com/epk"
+spotify = "https://open.spotify.com/artist/treeoflifetrio"
+instagram = "@treeoflifetrio"
+
+[acts.tree_of_life_trio.festival_prefs]
+preferred_types = ["jazz festival", "music festival", "arts festival"]
+avoid_types = ["metal festival", "EDM festival"]
+preferred_slot_times = ["evening", "night"]
+min_expected_attendance = 500
+willing_to_headline = true
+willing_to_workshop = true
+
+# CLOUDBURST - Jazz-Rock Fusion
+[acts.cloudburst]
+name = "CloudBurst"
+tagline = "Explosive jazz-rock fusion"
+genres = ["jazz-rock", "fusion", "progressive rock"]
+subgenres = ["jazz fusion", "prog rock"]
+active = true
+members = 5
+member_names = ["TBD Guitar", "TBD Keys", "TBD Bass", "TBD Drums", "TBD Sax"]
+instruments = ["electric guitar", "keyboards", "bass", "drums", "saxophone"]
+year_formed = 2024
+hometown = "Hudson Valley, NY"
+set_lengths = [60, 90, 120]
+min_stage_width = 20
+min_stage_depth = 14
+power_requirements = "Four 20A circuits"
+backline_needs = ["full backline preferred"]
+sound_check_time = 45
+bio_short = "CloudBurst delivers high-voltage jazz-rock fusion bridging prog rock virtuosity with jazz spontaneity."
+bio_long = "CloudBurst is a jazz-rock fusion powerhouse inspired by Mahavishnu Orchestra, Return to Forever, and Weather Report."
+
+[acts.cloudburst.fees]
+local = { min = 1500, target = 2500, max = 4000 }
+regional = { min = 3000, target = 5000, max = 7000 }
+national = { min = 6000, target = 10000, max = 15000 }
+international = { min = 12000, target = 18000, max = 30000 }
+
+[acts.cloudburst.travel]
+requires_flights_over = 350
+hotel_rooms_needed = 3
+per_diem_per_person = 85
+
+[acts.cloudburst.assets]
+website = "https://cloudburstmusic.com"
+epk_url = "https://cloudburstmusic.com/epk"
+instagram = "@cloudburstband"
+
+[acts.cloudburst.festival_prefs]
+preferred_types = ["jazz festival", "prog rock festival", "fusion festival"]
+avoid_types = ["country festival"]
+preferred_slot_times = ["evening", "night", "headliner"]
+min_expected_attendance = 1000
+willing_to_headline = true
+willing_to_workshop = true
+
+# TILLSON JAZZ ENSEMBLE
+[acts.tillson_jazz_ensemble]
+name = "Tillson Jazz Ensemble"
+tagline = "Classic jazz traditions reimagined"
+genres = ["jazz", "swing", "bebop", "standards"]
+subgenres = ["straight-ahead jazz", "hard bop"]
+active = true
+members = 5
+member_names = ["Michael Colletti", "TBD Trumpet", "TBD Sax", "TBD Bass", "TBD Drums"]
+instruments = ["piano", "trumpet", "tenor saxophone", "upright bass", "drums"]
+year_formed = 2023
+hometown = "Tillson, NY"
+set_lengths = [45, 60, 90, 120]
+min_stage_width = 14
+min_stage_depth = 10
+power_requirements = "Two 20A circuits"
+backline_needs = ["piano (acoustic preferred)", "bass amp", "drum kit"]
+sound_check_time = 30
+bio_short = "The Tillson Jazz Ensemble honors the great American jazz tradition with classic standards and originals."
+bio_long = "A classic jazz quintet dedicated to straight-ahead jazz from New York's Hudson Valley."
+
+[acts.tillson_jazz_ensemble.fees]
+local = { min = 800, target = 1500, max = 2500 }
+regional = { min = 2000, target = 3500, max = 5000 }
+national = { min = 4000, target = 7000, max = 10000 }
+international = { min = 8000, target = 12000, max = 20000 }
+
+[acts.tillson_jazz_ensemble.travel]
+requires_flights_over = 400
+hotel_rooms_needed = 3
+per_diem_per_person = 75
+
+[acts.tillson_jazz_ensemble.assets]
+website = "https://tillsonjazz.com"
+epk_url = "https://tillsonjazz.com/epk"
+instagram = "@tillsonjazzensemble"
+
+[acts.tillson_jazz_ensemble.festival_prefs]
+preferred_types = ["jazz festival", "arts festival", "wine festival"]
+avoid_types = ["rock festival", "EDM festival"]
+preferred_slot_times = ["evening", "dinner set"]
+min_expected_attendance = 200
+willing_to_headline = true
+willing_to_workshop = true
+
+# COLLETTI - Solo Looping Bass
+[acts.colletti]
+name = "Colletti"
+tagline = "Solo bass artistry through loops and live composition"
+genres = ["experimental", "ambient", "solo bass", "electronic"]
+subgenres = ["loop artist", "live looping", "one-man-band"]
+active = true
+members = 1
+member_names = ["Michael Colletti"]
+instruments = ["electric bass", "effects pedals", "loop station"]
+year_formed = 2024
+hometown = "Woodstock, NY"
+set_lengths = [30, 45, 60, 90]
+min_stage_width = 6
+min_stage_depth = 6
+power_requirements = "Two 20A circuits"
+backline_needs = ["bass amp with DI", "power conditioner"]
+sound_check_time = 20
+bio_short = "Colletti transforms bass into a one-person orchestra through live looping and real-time composition."
+bio_long = "Exploring the outer reaches of solo bass with loopers, synth pedals, and ambient effects."
+
+[acts.colletti.fees]
+local = { min = 200, target = 400, max = 700 }
+regional = { min = 500, target = 800, max = 1200 }
+national = { min = 1200, target = 2000, max = 3000 }
+international = { min = 2500, target = 4000, max = 6000 }
+
+[acts.colletti.travel]
+requires_flights_over = 500
+hotel_rooms_needed = 1
+per_diem_per_person = 75
+
+[acts.colletti.assets]
+website = "https://collettimusic.com"
+epk_url = "https://collettimusic.com/epk"
+bandcamp = "https://colletti.bandcamp.com"
+instagram = "@collettiloops"
+
+[acts.colletti.festival_prefs]
+preferred_types = ["experimental festival", "electronic festival", "arts festival", "maker faire"]
+avoid_types = ["country festival"]
+preferred_slot_times = ["late night", "evening"]
+min_expected_attendance = 50
+willing_to_headline = true
+willing_to_workshop = true
+
+# McGROOVIN - Irish Trad with Funk
+[acts.mcgroovin]
+name = "McGroovin"
+tagline = "Irish traditional music with a funky twist"
+genres = ["irish traditional", "celtic", "folk", "fusion"]
+subgenres = ["trad", "celtic fusion", "irish funk"]
+active = true
+members = 5
+member_names = ["TBD Fiddle", "TBD Flute", "TBD Guitar", "TBD Bass", "TBD Drums"]
+instruments = ["fiddle", "flute", "tin whistle", "guitar", "bouzouki", "bass", "drums"]
+year_formed = 2023
+hometown = "Hudson Valley, NY"
+set_lengths = [45, 60, 90, 120]
+min_stage_width = 14
+min_stage_depth = 10
+power_requirements = "Two 20A circuits"
+backline_needs = ["bass amp", "drum kit", "DI boxes"]
+sound_check_time = 30
+bio_short = "McGroovin takes Irish trad on a funky detour—authentic tunes with a modern rhythm section."
+bio_long = "Irish traditional music meets funk, soul, and groove with fiddle and flute over a locked-in rhythm section."
+
+[acts.mcgroovin.fees]
+local = { min = 500, target = 1000, max = 1500 }
+regional = { min = 1500, target = 2500, max = 3500 }
+national = { min = 3000, target = 5000, max = 8000 }
+international = { min = 6000, target = 10000, max = 15000 }
+
+[acts.mcgroovin.travel]
+requires_flights_over = 450
+hotel_rooms_needed = 3
+per_diem_per_person = 70
+
+[acts.mcgroovin.assets]
+website = "https://mcgroovin.com"
+epk_url = "https://mcgroovin.com/epk"
+instagram = "@mcgroovinband"
+
+[acts.mcgroovin.festival_prefs]
+preferred_types = ["irish festival", "celtic festival", "folk festival", "world music festival"]
+avoid_types = ["metal festival", "EDM"]
+preferred_slot_times = ["afternoon", "evening", "dance slot"]
+min_expected_attendance = 200
+willing_to_headline = true
+willing_to_workshop = true
+
+# NAIL, THUMP AND FLOW - Prog/Jazz Fusion
+[acts.nail_thump_flow]
+name = "Nail, Thump and Flow"
+tagline = "Progressive jazz fusion at the edge of possibility"
+genres = ["progressive jazz", "fusion", "experimental"]
+subgenres = ["prog jazz", "math rock jazz", "odd-meter"]
+active = true
+members = 4
+member_names = ["TBD Guitar", "TBD Keys", "Michael Colletti", "TBD Drums"]
+instruments = ["guitar", "keyboards", "bass", "drums"]
+year_formed = 2024
+hometown = "Hudson Valley, NY"
+set_lengths = [60, 90, 120]
+min_stage_width = 16
+min_stage_depth = 12
+power_requirements = "Three 20A circuits"
+backline_needs = ["guitar amp", "keys amp/DI", "bass amp", "drum kit"]
+sound_check_time = 45
+bio_short = "Nail, Thump and Flow pushes prog jazz fusion into uncharted territory with odd meters and fearless improvisation."
+bio_long = "At the bleeding edge of progressive jazz fusion, blending prog rock complexity with avant-garde jazz freedom."
+
+[acts.nail_thump_flow.fees]
+local = { min = 1200, target = 2000, max = 3000 }
+regional = { min = 2500, target = 4000, max = 6000 }
+national = { min = 5000, target = 8000, max = 12000 }
+international = { min = 10000, target = 15000, max = 25000 }
+
+[acts.nail_thump_flow.travel]
+requires_flights_over = 400
+hotel_rooms_needed = 2
+per_diem_per_person = 80
+
+[acts.nail_thump_flow.assets]
+website = "https://nailthumpflow.com"
+epk_url = "https://nailthumpflow.com/epk"
+bandcamp = "https://nailthumpflow.bandcamp.com"
+instagram = "@nailthumpflow"
+
+[acts.nail_thump_flow.festival_prefs]
+preferred_types = ["jazz festival", "prog festival", "fusion festival", "experimental festival"]
+avoid_types = ["country festival", "pop festival"]
+preferred_slot_times = ["evening", "night", "late night"]
+min_expected_attendance = 300
+willing_to_headline = true
+willing_to_workshop = true
+
+# PABLO SHINE LATIN JAZZ BAND
+[acts.pablo_shine]
+name = "Pablo Shine Latin Jazz Band"
+tagline = "Authentic Latin jazz heat from the Hudson Valley"
+genres = ["latin jazz", "afro-cuban", "salsa", "bossa nova"]
+subgenres = ["latin jazz", "afro-cuban jazz", "mambo"]
+active = true
+members = 7
+member_names = ["TBD Piano", "TBD Bass", "TBD Drums", "TBD Congas", "TBD Timbales", "TBD Trumpet", "TBD Sax"]
+instruments = ["piano", "bass", "drums", "congas", "timbales", "trumpet", "saxophone"]
+year_formed = 2023
+hometown = "Hudson Valley, NY"
+set_lengths = [60, 90, 120, 180]
+min_stage_width = 24
+min_stage_depth = 16
+power_requirements = "Three 20A circuits"
+backline_needs = ["piano or keys", "bass amp", "drum kit", "percussion setup"]
+sound_check_time = 60
+bio_short = "Pablo Shine Latin Jazz Band brings the fire of Havana with authentic Afro-Cuban rhythms and blazing horns."
+bio_long = "Seven-piece Latin jazz ensemble delivering mambo, salsa, and Brazilian jazz in the tradition of Tito Puente."
+
+[acts.pablo_shine.fees]
+local = { min = 2000, target = 3500, max = 5000 }
+regional = { min = 4000, target = 6500, max = 9000 }
+national = { min = 8000, target = 12000, max = 18000 }
+international = { min = 15000, target = 22000, max = 35000 }
+
+[acts.pablo_shine.travel]
+requires_flights_over = 350
+hotel_rooms_needed = 4
+per_diem_per_person = 90
+
+[acts.pablo_shine.assets]
+website = "https://pabloshine.com"
+epk_url = "https://pabloshine.com/epk"
+instagram = "@pabloshineband"
+
+[acts.pablo_shine.festival_prefs]
+preferred_types = ["latin festival", "jazz festival", "salsa festival", "world music festival"]
+avoid_types = ["rock-only festival", "country festival"]
+preferred_slot_times = ["evening", "night", "dance slot"]
+min_expected_attendance = 500
+willing_to_headline = true
+willing_to_workshop = true
+
+# MICHAEL COLLETTI SOLO
+[acts.solo_acoustic]
+name = "Michael Colletti Solo"
+tagline = "Intimate acoustic performances"
+genres = ["acoustic", "singer-songwriter", "jazz standards"]
+subgenres = ["solo piano", "piano-vocal"]
+active = true
+members = 1
+member_names = ["Michael Colletti"]
+instruments = ["piano", "acoustic guitar", "vocals"]
+year_formed = 2015
+hometown = "Woodstock, NY"
+set_lengths = [30, 45, 60, 90]
+min_stage_width = 6
+min_stage_depth = 4
+power_requirements = "One 15A circuit"
+backline_needs = ["piano or keyboard", "vocal mic"]
+sound_check_time = 15
+bio_short = "Michael Colletti delivers intimate solo performances blending jazz and singer-songwriter sensibility."
+bio_long = "Decades of musical experience in intimate acoustic performances spanning jazz standards and originals."
+
+[acts.solo_acoustic.fees]
+local = { min = 150, target = 300, max = 500 }
+regional = { min = 400, target = 600, max = 1000 }
+national = { min = 1000, target = 1500, max = 2500 }
+international = { min = 2000, target = 3500, max = 5000 }
+
+[acts.solo_acoustic.travel]
+requires_flights_over = 500
+hotel_rooms_needed = 1
+per_diem_per_person = 75
+
+[acts.solo_acoustic.assets]
+website = "https://michaelcolletti.com"
+epk_url = "https://michaelcolletti.com/epk"
+instagram = "@michaelcollettimusic"
+
+[acts.solo_acoustic.festival_prefs]
+preferred_types = ["folk festival", "singer-songwriter", "wine festival"]
+avoid_types = ["loud rock festival", "EDM"]
+preferred_slot_times = ["afternoon", "early evening", "brunch"]
+min_expected_attendance = 50
+willing_to_headline = true
+willing_to_workshop = true
+
+# TREE OF LIFE BAND (Full)
+[acts.full_band]
+name = "Tree of Life Band"
+tagline = "High-energy funk, soul, and R&B"
+genres = ["funk", "soul", "R&B", "dance"]
+subgenres = ["funk band", "soul revue"]
+active = true
+members = 6
+member_names = ["Michael Colletti", "Scott Brown", "Amit Shamir", "TBD Horn 1", "TBD Horn 2", "TBD Vocals"]
+instruments = ["keys", "bass", "drums", "trumpet", "saxophone", "vocals"]
+year_formed = 2022
+hometown = "Woodstock, NY"
+set_lengths = [60, 90, 120, 180]
+min_stage_width = 24
+min_stage_depth = 16
+power_requirements = "Three 20A circuits"
+backline_needs = ["full backline preferred"]
+sound_check_time = 60
+bio_short = "Tree of Life Band brings the party with 6-piece explosive funk, soul, and R&B."
+bio_long = "Full-powered soul revue with dynamic horn section and powerhouse vocals."
+
+[acts.full_band.fees]
+local = { min = 2000, target = 3500, max = 5000 }
+regional = { min = 4000, target = 6000, max = 8000 }
+national = { min = 8000, target = 12000, max = 18000 }
+international = { min = 15000, target = 25000, max = 40000 }
+
+[acts.full_band.travel]
+requires_flights_over = 350
+hotel_rooms_needed = 4
+per_diem_per_person = 100
+
+[acts.full_band.assets]
+website = "https://treeoflifeband.com"
+epk_url = "https://treeoflifeband.com/epk"
+instagram = "@treeoflifeband"
+
+[acts.full_band.festival_prefs]
+preferred_types = ["music festival", "funk festival", "soul festival"]
+avoid_types = ["classical", "country-only"]
+preferred_slot_times = ["headliner", "evening", "night"]
+min_expected_attendance = 1000
+willing_to_headline = true
+willing_to_workshop = false
