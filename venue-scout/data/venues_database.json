@@ -1,0 +1,1151 @@
+{
+  "metadata": {
+    "report_date": "2026-01-02",
+    "generated_by": "Venue Scout Research Agent",
+    "region": "Hudson Valley & Capital District, NY",
+    "total_venues": 32,
+    "data_sources": [
+      "HVMag.com",
+      "IndieOnTheMove.com",
+      "Bandsintown",
+      "Yelp",
+      "Venue websites",
+      "Hudson Valley One",
+      "Chronogram"
+    ]
+  },
+  "venues": [
+    {
+      "id": "colony-woodstock",
+      "name": "Colony Woodstock",
+      "type": "Music Venue / Restaurant",
+      "address": "22 Rock City Road",
+      "city": "Woodstock",
+      "state": "NY",
+      "zip": "12498",
+      "phone": "(845) 679-7625",
+      "website": "https://www.colonywoodstock.com",
+      "email": null,
+      "booking_contact": "Via website form",
+      "capacity": {
+        "standing": 380,
+        "seated": 150
+      },
+      "genres": ["all genres", "indie", "rock", "tribute bands", "jazz", "folk"],
+      "venue_features": {
+        "stage": true,
+        "sound_system": "State-of-the-art",
+        "lighting": "Professional",
+        "outdoor_space": "Beer garden (spring-fall)",
+        "food_service": true,
+        "bar": true,
+        "private_events": true
+      },
+      "booking_info": {
+        "typical_nights": ["Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
+        "open_mic": "Monday nights",
+        "age_restriction": "All ages",
+        "ticket_range": "$15-60"
+      },
+      "recent_acts": ["Martin Sexton", "La Lom", "The Dictators", "House of Hamill"],
+      "notes": "Historic 1929 hotel. State-of-the-art sound. Ideal for Tree of Life Trio - intimate setting with great acoustics.",
+      "suitability": {
+        "tree_of_life_trio": "Excellent",
+        "solo_acoustic": "Good",
+        "full_band": "Good",
+        "irish_session": "Possible"
+      },
+      "priority": 1,
+      "status": "active",
+      "last_verified": "2026-01-02"
+    },
+    {
+      "id": "levon-helm-studios",
+      "name": "Levon Helm Studios",
+      "type": "Recording Studio / Concert Venue",
+      "address": "160 Plochmann Lane",
+      "city": "Woodstock",
+      "state": "NY",
+      "zip": "12498",
+      "phone": "(845) 679-2744",
+      "website": "https://levonhelm.com",
+      "email": "info@levonhelm.com",
+      "booking_contact": "info@levonhelm.com",
+      "capacity": {
+        "standing": 250,
+        "seated": 200
+      },
+      "genres": ["americana", "roots", "blues", "rock", "jazz", "folk"],
+      "venue_features": {
+        "stage": true,
+        "sound_system": "World-class studio quality",
+        "lighting": "Professional",
+        "outdoor_space": "18 acres property",
+        "food_service": "Catered events",
+        "bar": true,
+        "private_events": true,
+        "recording_facility": true
+      },
+      "booking_info": {
+        "signature_event": "Midnight Ramble (Saturdays)",
+        "ticket_sales": "Via Tixr exclusively",
+        "age_restriction": "All ages",
+        "ticket_range": "$75-150"
+      },
+      "recent_acts": ["Natalie Merchant", "Jay Collins", "Ondara", "Midnight North", "James McMurtry"],
+      "notes": "Legendary venue - home of The Band's Levon Helm. Premium venue for established acts. Midnight Rambles are institution.",
+      "suitability": {
+        "tree_of_life_trio": "Excellent - aspirational venue",
+        "solo_acoustic": "Possible for special events",
+        "full_band": "Good",
+        "irish_session": "Not typical"
+      },
+      "priority": 1,
+      "status": "active",
+      "last_verified": "2026-01-02"
+    },
+    {
+      "id": "bearsville-theater",
+      "name": "Bearsville Theater",
+      "type": "Theater / Concert Hall",
+      "address": "291 Tinker Street",
+      "city": "Woodstock",
+      "state": "NY",
+      "zip": "12498",
+      "phone": "(845) 684-7133",
+      "website": "https://bearsvilletheater.com",
+      "email": "info@bearsvilletheater.com",
+      "booking_contact": "Dayglo Presents (Peter Shapiro)",
+      "capacity": {
+        "main_room": 400,
+        "lounge": 100
+      },
+      "genres": ["rock", "jam", "indie", "americana", "jazz"],
+      "venue_features": {
+        "stage": true,
+        "sound_system": "Professional theater system",
+        "lighting": "Full theater production",
+        "meeting_space": "7,000 sq ft",
+        "food_service": true,
+        "bar": true,
+        "private_events": true,
+        "streaming_capability": true
+      },
+      "booking_info": {
+        "managed_by": "Dayglo Presents",
+        "typical_nights": ["Thursday", "Friday", "Saturday", "Sunday"],
+        "ticket_sales": "Ticketmaster",
+        "ticket_range": "$25-75"
+      },
+      "recent_acts": ["Nels Cline", "John Medeski", "Billy Martin", "G. Love", "Robyn Hitchcock", "Dogs In A Pile"],
+      "notes": "Historic Albert Grossman venue, renovated 2024. Major venue under Dayglo/Relix management. Strong jam band connections.",
+      "suitability": {
+        "tree_of_life_trio": "Good - for special bills",
+        "solo_acoustic": "Lounge stage",
+        "full_band": "Excellent",
+        "irish_session": "Not typical"
+      },
+      "priority": 1,
+      "status": "active",
+      "last_verified": "2026-01-02"
+    },
+    {
+      "id": "the-falcon",
+      "name": "The Falcon",
+      "type": "Music Venue / Restaurant",
+      "address": "1348 Route 9W",
+      "city": "Marlboro",
+      "state": "NY",
+      "zip": "12542",
+      "phone": "(845) 236-7970",
+      "website": "https://www.liveatthefalcon.com",
+      "email": null,
+      "booking_contact": "Lee Falco (via website contact form)",
+      "capacity": {
+        "main_room": 150,
+        "underground": 75
+      },
+      "genres": ["jazz", "blues", "rock", "world", "funk", "soul"],
+      "venue_features": {
+        "stage": true,
+        "sound_system": "Top-notch",
+        "lighting": "Professional",
+        "outdoor_space": "Deck overlooking falls",
+        "food_service": true,
+        "bar": true,
+        "museum": "Avalon Archives music memorabilia"
+      },
+      "booking_info": {
+        "payment_model": "Donation-based (no cover, 100% to artists)",
+        "suggested_donation": "$30",
+        "typical_nights": ["Thursday", "Friday", "Saturday", "Sunday"],
+        "jazz_night": "Sunday",
+        "hours": "Dining 5-9pm, Music 7pm"
+      },
+      "recent_acts": ["Joe Lovano", "James Francies", "Jungle Love", "The Restless Age", "Ian Hendrickson-Smith"],
+      "notes": "Village Vanguard of Hudson Valley. Top-tier jazz on Sundays. Tony/Lee Falco family operation. IDEAL FOR TREE OF LIFE TRIO - jazz/soul focus.",
+      "suitability": {
+        "tree_of_life_trio": "PERFECT FIT - priority contact",
+        "solo_acoustic": "Good",
+        "full_band": "Good",
+        "irish_session": "Possible"
+      },
+      "priority": 1,
+      "status": "active",
+      "last_verified": "2026-01-02"
+    },
+    {
+      "id": "city-winery-hv",
+      "name": "City Winery Hudson Valley",
+      "type": "Winery / Concert Venue",
+      "address": "23 Factory Street",
+      "city": "Montgomery",
+      "state": "NY",
+      "zip": "12549",
+      "phone": "(845) 424-0222",
+      "website": "https://citywinery.com/hudson-valley",
+      "email": "info@citywinery.com",
+      "booking_contact": "Lerika Hargrove - lhargrove@citywinery.com, (845) 424-0133",
+      "capacity": {
+        "venue": 300,
+        "outdoor": 500
+      },
+      "genres": ["all genres", "jazz", "singer-songwriter", "rock", "pop"],
+      "venue_features": {
+        "stage": true,
+        "sound_system": "Professional",
+        "winery": true,
+        "restaurant": true,
+        "outdoor_space": "22-acre vineyard estate",
+        "private_events": true
+      },
+      "booking_info": {
+        "ticket_sales": "City Winery website",
+        "dining_during_show": true,
+        "typical_nights": ["Friday", "Saturday", "Sunday"],
+        "ticket_range": "$35-85"
+      },
+      "recent_acts": ["David Nail", "Bob Schneider", "Raul Malo", "Anders Osborne", "Craig Ferguson"],
+      "notes": "Premium winery venue in restored Montgomery Worsted Mills. Corporate-managed with consistent booking process. Good for polished acts.",
+      "suitability": {
+        "tree_of_life_trio": "Excellent - upscale setting",
+        "solo_acoustic": "Good",
+        "full_band": "Possible",
+        "irish_session": "Not typical"
+      },
+      "priority": 2,
+      "status": "active",
+      "last_verified": "2026-01-02"
+    },
+    {
+      "id": "daryls-house",
+      "name": "Daryl's House Club",
+      "type": "Music Venue / Restaurant",
+      "address": "130 Route 22",
+      "city": "Pawling",
+      "state": "NY",
+      "zip": "12564",
+      "phone": "(845) 289-0185",
+      "website": "https://darylshouseclub.com",
+      "email": null,
+      "booking_contact": "Via website (TicketWeb)",
+      "capacity": {
+        "indoor": 200,
+        "outdoor": 2000
+      },
+      "genres": ["rock", "americana", "blues", "soul", "folk"],
+      "venue_features": {
+        "stage": true,
+        "sound_system": "World-class",
+        "lighting": "TV production quality",
+        "food_service": true,
+        "bar": true,
+        "private_events": true,
+        "tv_show_venue": "Live From Daryl's House"
+      },
+      "booking_info": {
+        "ticket_sales": "TicketWeb only",
+        "typical_nights": ["Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
+        "brunch_music": "Saturday & Sunday",
+        "ticket_range": "$25-75"
+      },
+      "recent_acts": ["Lisa Fischer", "Martin Barre", "Sawyer Fredericks", "Joseph Arthur"],
+      "notes": "Daryl Hall's venue - Rock & Roll Hall of Fame connection. Great sound system. Celebrity sightings. Competitive booking.",
+      "suitability": {
+        "tree_of_life_trio": "Good - soul/R&B connection",
+        "solo_acoustic": "Good",
+        "full_band": "Good",
+        "irish_session": "Not typical"
+      },
+      "priority": 2,
+      "status": "active",
+      "last_verified": "2026-01-02"
+    },
+    {
+      "id": "basilica-hudson",
+      "name": "Basilica Hudson",
+      "type": "Arts Center / Festival Venue",
+      "address": "110 South Front Street",
+      "city": "Hudson",
+      "state": "NY",
+      "zip": "12534",
+      "phone": "(518) 822-1050",
+      "website": "https://basilicahudson.org",
+      "email": "info@basilicahudson.org",
+      "booking_contact": "info@basilicahudson.org",
+      "capacity": {
+        "maximum": 1200
+      },
+      "genres": ["experimental", "indie", "electronic", "world", "avant-garde"],
+      "venue_features": {
+        "stage": true,
+        "space": "18,000 sq ft industrial",
+        "outdoor_space": "Waterfront property",
+        "art_gallery": true,
+        "solar_powered": true
+      },
+      "booking_info": {
+        "season": "Spring through Fall",
+        "signature_events": ["Basilica SoundScape", "24 Hour Drone", "Farm + Flea"],
+        "nonprofit": true,
+        "programming": "Sliding scale / free"
+      },
+      "recent_acts": ["Patti Smith", "Experimental artists"],
+      "notes": "Non-profit arts center. Founded by Melissa Auf der Maur. Industrial-chic space. Better for festivals than regular gigs.",
+      "suitability": {
+        "tree_of_life_trio": "Possible - special events",
+        "solo_acoustic": "Not typical",
+        "full_band": "Good for festivals",
+        "irish_session": "Not typical"
+      },
+      "priority": 3,
+      "status": "active",
+      "last_verified": "2026-01-02"
+    },
+    {
+      "id": "towne-crier-cafe",
+      "name": "Towne Crier Cafe",
+      "type": "Music Venue / Restaurant",
+      "address": "379 Main Street",
+      "city": "Beacon",
+      "state": "NY",
+      "zip": "12508",
+      "phone": "(845) 855-1300",
+      "website": "https://townecrier.com",
+      "email": null,
+      "booking_contact": "Via website",
+      "capacity": {
+        "main_stage": 200,
+        "salon_stage": 50
+      },
+      "genres": ["folk", "jazz", "blues", "celtic", "bluegrass", "cajun", "zydeco", "world"],
+      "venue_features": {
+        "stages": 2,
+        "sound_system": "Professional listening room quality",
+        "food_service": true,
+        "bar": true
+      },
+      "booking_info": {
+        "established": 1972,
+        "typical_nights": ["Thursday", "Friday", "Saturday", "Sunday"],
+        "open_mic": "Thursday (Salon)",
+        "salon_stage": "Complimentary with dinner"
+      },
+      "recent_acts": ["Shemekia Copeland", "C.J. Chenier", "Tom Rush", "Sawyer Fredericks", "Brad Cole (Bossa Blue)"],
+      "notes": "53+ year folk institution. Pete Seeger, Odetta legacy. TWO STAGES - great for developing relationship. Excellent for jazz/world.",
+      "suitability": {
+        "tree_of_life_trio": "EXCELLENT - jazz/soul focus",
+        "solo_acoustic": "Perfect fit",
+        "full_band": "Main stage",
+        "irish_session": "Celtic nights"
+      },
+      "priority": 1,
+      "status": "active",
+      "last_verified": "2026-01-02"
+    },
+    {
+      "id": "caffe-lena",
+      "name": "Caffè Lena",
+      "type": "Coffeehouse / Listening Room",
+      "address": "47 Phila Street",
+      "city": "Saratoga Springs",
+      "state": "NY",
+      "zip": "12866",
+      "phone": null,
+      "website": "https://www.caffelena.org",
+      "email": null,
+      "booking_contact": "Via website",
+      "capacity": {
+        "seated": 100
+      },
+      "genres": ["folk", "bluegrass", "singer-songwriter", "jazz", "world", "poetry"],
+      "venue_features": {
+        "listening_room": true,
+        "vintage_atmosphere": true,
+        "volunteer_staff": true,
+        "nonprofit": true
+      },
+      "booking_info": {
+        "established": 1960,
+        "historic_status": "National Register of Historic Places",
+        "legacy_artists": ["Bob Dylan", "Arlo Guthrie", "Ani DiFranco"]
+      },
+      "recent_acts": ["Crys Matthews", "Hot Club of Saratoga", "Gypsy jazz ensembles"],
+      "notes": "Oldest continuously operating folk venue in US. Bob Dylan played here. Intimate listening room - perfect for acoustic jazz.",
+      "suitability": {
+        "tree_of_life_trio": "Excellent - acoustic jazz",
+        "solo_acoustic": "Perfect fit",
+        "full_band": "Too small",
+        "irish_session": "Good fit"
+      },
+      "priority": 1,
+      "status": "active",
+      "last_verified": "2026-01-02"
+    },
+    {
+      "id": "pearl-moon",
+      "name": "Pearl Moon",
+      "type": "Restaurant / Live Music",
+      "address": "52 Mill Hill Road",
+      "city": "Woodstock",
+      "state": "NY",
+      "zip": "12498",
+      "phone": null,
+      "website": null,
+      "email": null,
+      "booking_contact": "Direct contact",
+      "capacity": {
+        "estimated": 75
+      },
+      "genres": ["jazz", "folk", "singer-songwriter"],
+      "venue_features": {
+        "restaurant": true,
+        "bar": true
+      },
+      "booking_info": {
+        "music_nights": ["Friday", "Saturday"],
+        "open_mic": "Thursday"
+      },
+      "notes": "Popular Woodstock dining destination with weekend music. Good local entry point.",
+      "suitability": {
+        "tree_of_life_trio": "Good",
+        "solo_acoustic": "Excellent",
+        "full_band": "Too small",
+        "irish_session": "Possible"
+      },
+      "priority": 3,
+      "status": "active",
+      "last_verified": "2026-01-02"
+    },
+    {
+      "id": "tubby-kingston",
+      "name": "Tubby's Kingston",
+      "type": "Bar / Music Venue",
+      "address": "Wall Street",
+      "city": "Kingston",
+      "state": "NY",
+      "zip": "12401",
+      "phone": "(845) 943-4446",
+      "website": "https://www.tubbyskingston.com",
+      "email": null,
+      "booking_contact": "Direct",
+      "capacity": {
+        "estimated": 100
+      },
+      "genres": ["noise rock", "avant-garde", "experimental"],
+      "venue_features": {
+        "bar": true,
+        "vegetarian_menu": true
+      },
+      "booking_info": {
+        "style": "Occasional shows"
+      },
+      "notes": "Hip Kingston spot - favors experimental/avant-garde. Not ideal for jazz trio but good scene connection.",
+      "suitability": {
+        "tree_of_life_trio": "Not ideal",
+        "solo_acoustic": "Possible",
+        "full_band": "Possible",
+        "irish_session": "Not typical"
+      },
+      "priority": 4,
+      "status": "active",
+      "last_verified": "2026-01-02"
+    },
+    {
+      "id": "beverly-lounge",
+      "name": "The Beverly",
+      "type": "Bar / Music Venue",
+      "address": "29 Broadway",
+      "city": "Kingston",
+      "state": "NY",
+      "zip": "12401",
+      "phone": "(845) 514-2570",
+      "website": "https://www.thebeverlylounge.com",
+      "email": null,
+      "booking_contact": "Direct",
+      "capacity": {
+        "back_room": 150
+      },
+      "genres": ["indie", "rock", "alternative"],
+      "venue_features": {
+        "bar": true,
+        "back_room_venue": true
+      },
+      "booking_info": {
+        "notes": "Former BSP overflow bookings"
+      },
+      "recent_acts": ["Jonathan Richman", "Eleanor Friedberger"],
+      "notes": "Rising Kingston venue. Getting quality indie bookings.",
+      "suitability": {
+        "tree_of_life_trio": "Possible",
+        "solo_acoustic": "Good",
+        "full_band": "Good",
+        "irish_session": "Not typical"
+      },
+      "priority": 3,
+      "status": "active",
+      "last_verified": "2026-01-02"
+    },
+    {
+      "id": "ask-kingston",
+      "name": "Art Society of Kingston (ASK)",
+      "type": "Arts Center",
+      "address": "97 Broadway",
+      "city": "Kingston",
+      "state": "NY",
+      "zip": "12401",
+      "phone": "(845) 338-0333",
+      "website": "https://www.askforarts.org",
+      "email": null,
+      "booking_contact": "Via website",
+      "capacity": {
+        "performance_space": 99
+      },
+      "genres": ["classical", "jazz", "singer-songwriter", "chamber"],
+      "venue_features": {
+        "gallery": true,
+        "performance_space": true,
+        "nonprofit": true
+      },
+      "booking_info": {
+        "programming": "Classical guitar series, intimate shows"
+      },
+      "notes": "Member-based arts center. Good for intimate, cultured performances. Chamber jazz would fit well.",
+      "suitability": {
+        "tree_of_life_trio": "Good - intimate setting",
+        "solo_acoustic": "Excellent",
+        "full_band": "Too small",
+        "irish_session": "Possible"
+      },
+      "priority": 3,
+      "status": "active",
+      "last_verified": "2026-01-02"
+    },
+    {
+      "id": "opus40",
+      "name": "Opus 40",
+      "type": "Sculpture Park / Outdoor Venue",
+      "address": "50 Fite Road",
+      "city": "Saugerties",
+      "state": "NY",
+      "zip": "12477",
+      "phone": "(845) 681-9352",
+      "website": "https://www.opus40.org",
+      "email": null,
+      "booking_contact": "Via website",
+      "capacity": {
+        "outdoor": 500
+      },
+      "genres": ["all genres"],
+      "venue_features": {
+        "outdoor": true,
+        "sculpture_park": true,
+        "historic_house": true
+      },
+      "booking_info": {
+        "season": "Summer",
+        "notes": "Well-curated booking, unique setting"
+      },
+      "notes": "Harvey Fite's sculpture park. Incomparable outdoor setting. Summer programming.",
+      "suitability": {
+        "tree_of_life_trio": "Good - outdoor summer",
+        "solo_acoustic": "Good",
+        "full_band": "Excellent",
+        "irish_session": "Possible"
+      },
+      "priority": 2,
+      "status": "active",
+      "last_verified": "2026-01-02"
+    },
+    {
+      "id": "upac-kingston",
+      "name": "Ulster Performing Arts Center (UPAC)",
+      "type": "Theater",
+      "address": "601 Broadway",
+      "city": "Kingston",
+      "state": "NY",
+      "zip": "12401",
+      "phone": "(845) 339-6088",
+      "website": null,
+      "email": null,
+      "booking_contact": "(845) 339-6088",
+      "capacity": {
+        "theater": 1500
+      },
+      "genres": ["all genres"],
+      "venue_features": {
+        "historic_theater": true,
+        "full_production": true
+      },
+      "booking_info": {
+        "managed_with": "Bardavon"
+      },
+      "notes": "Major regional theater. Good for bigger productions. Bardavon management.",
+      "suitability": {
+        "tree_of_life_trio": "For special events only",
+        "solo_acoustic": "Not typical",
+        "full_band": "Good",
+        "irish_session": "Not typical"
+      },
+      "priority": 4,
+      "status": "active",
+      "last_verified": "2026-01-02"
+    },
+    {
+      "id": "9-maple",
+      "name": "9 Maple Ave",
+      "type": "Jazz Bar",
+      "address": "9 Maple Avenue",
+      "city": "Saratoga Springs",
+      "state": "NY",
+      "zip": "12866",
+      "phone": null,
+      "website": null,
+      "email": null,
+      "booking_contact": "Direct",
+      "capacity": {
+        "seated": 40
+      },
+      "genres": ["jazz"],
+      "venue_features": {
+        "bar": true,
+        "scotch_selection": "Largest between Manhattan and Montreal",
+        "martini_menu": "250+ options"
+      },
+      "notes": "Historic 19th century building. Intimate jazz bar. Perfect for small jazz combos.",
+      "suitability": {
+        "tree_of_life_trio": "EXCELLENT - intimate jazz",
+        "solo_acoustic": "Good",
+        "full_band": "Too small",
+        "irish_session": "Not typical"
+      },
+      "priority": 2,
+      "status": "active",
+      "last_verified": "2026-01-02"
+    },
+    {
+      "id": "putnam-place",
+      "name": "Putnam Place",
+      "type": "Music Venue / Bar",
+      "address": "63A Putnam Street",
+      "city": "Saratoga Springs",
+      "state": "NY",
+      "zip": "12866",
+      "phone": null,
+      "website": null,
+      "email": null,
+      "booking_contact": "Direct",
+      "capacity": {
+        "estimated": 200
+      },
+      "genres": ["rock", "jam", "blues", "funk"],
+      "venue_features": {
+        "bar": true,
+        "outdoor_patio": true,
+        "private_events": true
+      },
+      "booking_info": {
+        "regular": "Family Tree - Monday nights"
+      },
+      "notes": "Downtown Saratoga venue. Good for regional acts.",
+      "suitability": {
+        "tree_of_life_trio": "Good",
+        "solo_acoustic": "Possible",
+        "full_band": "Good",
+        "irish_session": "Possible"
+      },
+      "priority": 3,
+      "status": "active",
+      "last_verified": "2026-01-02"
+    },
+    {
+      "id": "parting-glass",
+      "name": "The Parting Glass Pub",
+      "type": "Irish Pub",
+      "address": "40 Lake Avenue",
+      "city": "Saratoga Springs",
+      "state": "NY",
+      "zip": "12866",
+      "phone": null,
+      "website": null,
+      "email": null,
+      "booking_contact": "Direct",
+      "capacity": {
+        "estimated": 100
+      },
+      "genres": ["irish traditional", "celtic", "folk"],
+      "venue_features": {
+        "pub": true,
+        "session_friendly": true
+      },
+      "booking_info": {
+        "irish_music": "Weekly",
+        "session": "Musicians welcome to join"
+      },
+      "notes": "Traditional Irish pub with weekly sessions. Musicians welcome to sit in.",
+      "suitability": {
+        "tree_of_life_trio": "Not typical",
+        "solo_acoustic": "Possible",
+        "full_band": "Not typical",
+        "irish_session": "PERFECT FIT"
+      },
+      "priority": 2,
+      "status": "active",
+      "last_verified": "2026-01-02"
+    },
+    {
+      "id": "hudson-valley-brewery",
+      "name": "Hudson Valley Brewery",
+      "type": "Brewery / Event Space",
+      "address": "7 Main Street",
+      "city": "Beacon",
+      "state": "NY",
+      "zip": "12508",
+      "phone": null,
+      "website": "https://hudsonvalleybrewery.com",
+      "email": null,
+      "booking_contact": "Via website",
+      "capacity": {
+        "tasting_room": 100,
+        "courtyard": 200
+      },
+      "genres": ["DJ", "experimental", "varied"],
+      "venue_features": {
+        "brewery": true,
+        "tasting_room": true,
+        "courtyard": true
+      },
+      "booking_info": {
+        "regular": "DJ No Rules - vinyl nights",
+        "events": "Block parties, themed nights"
+      },
+      "notes": "Award-winning brewery with event space. DJ-focused but occasional live music.",
+      "suitability": {
+        "tree_of_life_trio": "Possible - special events",
+        "solo_acoustic": "Possible",
+        "full_band": "Courtyard",
+        "irish_session": "Not typical"
+      },
+      "priority": 4,
+      "status": "active",
+      "last_verified": "2026-01-02"
+    },
+    {
+      "id": "arrowood-farms",
+      "name": "Arrowood Farms Brewery",
+      "type": "Brewery / Event Space",
+      "address": "236 Lower Whitfield Road",
+      "city": "Accord",
+      "state": "NY",
+      "zip": "12404",
+      "phone": null,
+      "website": null,
+      "email": null,
+      "booking_contact": "Direct",
+      "capacity": {
+        "outdoor": 300
+      },
+      "genres": ["indie", "folk", "rock"],
+      "venue_features": {
+        "brewery": true,
+        "farm_setting": true,
+        "solar_powered": true
+      },
+      "booking_info": {
+        "festivals": ["Dirt Farmer Festival", "Woodsist Fest"]
+      },
+      "notes": "Farm brewery hosting major indie festivals. Gorgeous outdoor setting.",
+      "suitability": {
+        "tree_of_life_trio": "Good - outdoor",
+        "solo_acoustic": "Good",
+        "full_band": "Excellent",
+        "irish_session": "Possible"
+      },
+      "priority": 3,
+      "status": "active",
+      "last_verified": "2026-01-02"
+    },
+    {
+      "id": "westwind-orchard",
+      "name": "Westwind Orchard",
+      "type": "Cidery / Restaurant",
+      "address": "Lower Whitfield Road",
+      "city": "Accord",
+      "state": "NY",
+      "zip": "12404",
+      "phone": null,
+      "website": null,
+      "email": null,
+      "booking_contact": "Direct",
+      "capacity": {
+        "estimated": 75
+      },
+      "genres": ["folk", "americana", "jazz"],
+      "venue_features": {
+        "cidery": true,
+        "restaurant": true,
+        "pizzas": true
+      },
+      "booking_info": {
+        "live_music": "Weekends"
+      },
+      "notes": "European-style cider with live music and wood-fired pizza. Intimate farm setting.",
+      "suitability": {
+        "tree_of_life_trio": "Good",
+        "solo_acoustic": "Excellent",
+        "full_band": "Too small",
+        "irish_session": "Possible"
+      },
+      "priority": 3,
+      "status": "active",
+      "last_verified": "2026-01-02"
+    },
+    {
+      "id": "clemson-bros",
+      "name": "Clemson Bros. Brewery (former Gilded Otter)",
+      "type": "Brewpub",
+      "address": "3 Main Street",
+      "city": "New Paltz",
+      "state": "NY",
+      "zip": "12561",
+      "phone": "(845) 256-1700",
+      "website": "https://www.clemsonbrewing.com",
+      "email": null,
+      "booking_contact": "Direct",
+      "capacity": {
+        "estimated": 150
+      },
+      "genres": ["varied", "local"],
+      "venue_features": {
+        "brewery": true,
+        "restaurant": true
+      },
+      "booking_info": {
+        "history": "20+ years as Gilded Otter - music tradition"
+      },
+      "notes": "Historic New Paltz brewpub. Good local music tradition from Gilded Otter days.",
+      "suitability": {
+        "tree_of_life_trio": "Good",
+        "solo_acoustic": "Good",
+        "full_band": "Possible",
+        "irish_session": "Possible"
+      },
+      "priority": 3,
+      "status": "active",
+      "last_verified": "2026-01-02"
+    },
+    {
+      "id": "unison-arts",
+      "name": "Unison Arts Center",
+      "type": "Arts Center",
+      "address": "68 Mountain Rest Road",
+      "city": "New Paltz",
+      "state": "NY",
+      "zip": "12561",
+      "phone": null,
+      "website": null,
+      "email": null,
+      "booking_contact": "Direct",
+      "capacity": {
+        "estimated": 150
+      },
+      "genres": ["folk", "world", "jazz", "classical"],
+      "venue_features": {
+        "arts_center": true,
+        "nonprofit": true
+      },
+      "notes": "Cultural and performance arts center. Good for world music and jazz.",
+      "suitability": {
+        "tree_of_life_trio": "Good",
+        "solo_acoustic": "Excellent",
+        "full_band": "Possible",
+        "irish_session": "Good"
+      },
+      "priority": 3,
+      "status": "active",
+      "last_verified": "2026-01-02"
+    },
+    {
+      "id": "2-way-brewing",
+      "name": "2 Way Brewing Company",
+      "type": "Brewery",
+      "address": "Main Street",
+      "city": "Beacon",
+      "state": "NY",
+      "zip": "12508",
+      "phone": null,
+      "website": null,
+      "email": null,
+      "booking_contact": "Direct",
+      "capacity": {
+        "estimated": 75
+      },
+      "genres": ["varied"],
+      "venue_features": {
+        "brewery": true,
+        "convenient_location": true
+      },
+      "booking_info": {
+        "hours": "6 days/week",
+        "draft_price": "$6"
+      },
+      "notes": "Convenient Beacon location. Casual atmosphere for acoustic shows.",
+      "suitability": {
+        "tree_of_life_trio": "Possible",
+        "solo_acoustic": "Good",
+        "full_band": "Too small",
+        "irish_session": "Possible"
+      },
+      "priority": 4,
+      "status": "active",
+      "last_verified": "2026-01-02"
+    },
+    {
+      "id": "sloop-brewing",
+      "name": "Sloop Brewing Co.",
+      "type": "Brewery",
+      "address": "Old IBM Campus",
+      "city": "East Fishkill",
+      "state": "NY",
+      "zip": "12533",
+      "phone": null,
+      "website": null,
+      "email": null,
+      "booking_contact": "Direct",
+      "capacity": {
+        "estimated": 200
+      },
+      "genres": ["varied"],
+      "venue_features": {
+        "brewery": true,
+        "large_facility": true
+      },
+      "notes": "Major craft brewery. Event space for larger functions.",
+      "suitability": {
+        "tree_of_life_trio": "Possible",
+        "solo_acoustic": "Possible",
+        "full_band": "Good",
+        "irish_session": "Not typical"
+      },
+      "priority": 4,
+      "status": "active",
+      "last_verified": "2026-01-02"
+    },
+    {
+      "id": "bethel-woods",
+      "name": "Bethel Woods Center for the Arts",
+      "type": "Amphitheater / Museum",
+      "address": "200 Hurd Road",
+      "city": "Bethel",
+      "state": "NY",
+      "zip": "12720",
+      "phone": null,
+      "website": "https://www.bethelwoodscenter.org",
+      "email": null,
+      "booking_contact": "Corporate booking",
+      "capacity": {
+        "amphitheater": 15000
+      },
+      "genres": ["all genres - major acts"],
+      "venue_features": {
+        "amphitheater": true,
+        "museum": true,
+        "1969_woodstock_site": true
+      },
+      "notes": "Site of 1969 Woodstock. Major amphitheater venue. For established touring acts only.",
+      "suitability": {
+        "tree_of_life_trio": "Not applicable - major acts only",
+        "solo_acoustic": "Not applicable",
+        "full_band": "Not applicable",
+        "irish_session": "Not applicable"
+      },
+      "priority": 5,
+      "status": "active",
+      "last_verified": "2026-01-02"
+    },
+    {
+      "id": "troy-music-hall",
+      "name": "Troy Savings Bank Music Hall",
+      "type": "Concert Hall",
+      "address": "30 Second Street",
+      "city": "Troy",
+      "state": "NY",
+      "zip": "12180",
+      "phone": null,
+      "website": null,
+      "email": null,
+      "booking_contact": "Corporate booking",
+      "capacity": {
+        "theater": 1200
+      },
+      "genres": ["classical", "jazz", "folk", "comedy"],
+      "venue_features": {
+        "historic": true,
+        "world_class_acoustics": true
+      },
+      "booking_info": {
+        "series": ["Lift Series - intimate on-stage"],
+        "orchestra": "Albany Symphony"
+      },
+      "recent_acts": ["Albert Spaulding", "Myra Hess"],
+      "notes": "Built 1875. World-renowned acoustics. Major classical venue with jazz programming.",
+      "suitability": {
+        "tree_of_life_trio": "Good - Lift Series",
+        "solo_acoustic": "Excellent",
+        "full_band": "Main stage",
+        "irish_session": "Not typical"
+      },
+      "priority": 3,
+      "status": "active",
+      "last_verified": "2026-01-02"
+    },
+    {
+      "id": "avalon-lounge",
+      "name": "Avalon Lounge",
+      "type": "Dance Club / Venue",
+      "address": "29 Church Street",
+      "city": "Catskill",
+      "state": "NY",
+      "zip": "12414",
+      "phone": null,
+      "website": null,
+      "email": null,
+      "booking_contact": "Direct",
+      "capacity": {
+        "estimated": 150
+      },
+      "genres": ["indie", "electronic", "dance", "experimental"],
+      "venue_features": {
+        "dance_club": true,
+        "korean_kitchen": true,
+        "sake_bar": true
+      },
+      "notes": "Dance club with dynamic lighting. Korean food. Good for high-energy shows.",
+      "suitability": {
+        "tree_of_life_trio": "Possible - funk/dance night",
+        "solo_acoustic": "Not typical",
+        "full_band": "Good",
+        "irish_session": "Not typical"
+      },
+      "priority": 3,
+      "status": "active",
+      "last_verified": "2026-01-02"
+    },
+    {
+      "id": "lumberyard",
+      "name": "Lumberyard",
+      "type": "Performing Arts Center",
+      "address": "62 Water Street",
+      "city": "Catskill",
+      "state": "NY",
+      "zip": "12414",
+      "phone": null,
+      "website": null,
+      "email": null,
+      "booking_contact": "Nonprofit - via website",
+      "capacity": {
+        "estimated": 200
+      },
+      "genres": ["experimental", "dance", "theater", "music"],
+      "venue_features": {
+        "state_of_art_facility": true,
+        "nonprofit": true,
+        "artist_residency": true
+      },
+      "notes": "Nonprofit performing arts campus. NYC artists test work before premieres. Contemporary focus.",
+      "suitability": {
+        "tree_of_life_trio": "Possible - special programming",
+        "solo_acoustic": "Good",
+        "full_band": "Good",
+        "irish_session": "Not typical"
+      },
+      "priority": 4,
+      "status": "active",
+      "last_verified": "2026-01-02"
+    },
+    {
+      "id": "roost",
+      "name": "Roost",
+      "type": "Restaurant / Concert Hall",
+      "address": "143 Main Street",
+      "city": "Sparkill",
+      "state": "NY",
+      "zip": "10976",
+      "phone": null,
+      "website": null,
+      "email": null,
+      "booking_contact": "Direct",
+      "capacity": {
+        "estimated": 100
+      },
+      "genres": ["jazz", "latin jazz", "world"],
+      "venue_features": {
+        "restaurant": true,
+        "concert_hall": true,
+        "art_gallery": true
+      },
+      "notes": "Culinary + performing + visual arts combo. American/Mediterranean cuisine. Latin jazz focus.",
+      "suitability": {
+        "tree_of_life_trio": "EXCELLENT - jazz/soul focus",
+        "solo_acoustic": "Good",
+        "full_band": "Too small",
+        "irish_session": "Not typical"
+      },
+      "priority": 2,
+      "status": "active",
+      "last_verified": "2026-01-02"
+    },
+    {
+      "id": "quinns",
+      "name": "Quinn's",
+      "type": "Restaurant / Bar",
+      "address": "330 Main Street",
+      "city": "Beacon",
+      "state": "NY",
+      "zip": "12508",
+      "phone": null,
+      "website": null,
+      "email": null,
+      "booking_contact": "Direct",
+      "capacity": {
+        "estimated": 75
+      },
+      "genres": ["varied", "indie"],
+      "venue_features": {
+        "restaurant": true,
+        "ramen": true,
+        "comfort_food": true
+      },
+      "notes": "Popular for ramen. Occasional live music. Good Beacon scene connection.",
+      "suitability": {
+        "tree_of_life_trio": "Possible",
+        "solo_acoustic": "Good",
+        "full_band": "Too small",
+        "irish_session": "Possible"
+      },
+      "priority": 4,
+      "status": "active",
+      "last_verified": "2026-01-02"
+    }
+  ]
+}

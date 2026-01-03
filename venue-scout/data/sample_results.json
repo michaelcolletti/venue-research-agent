@@ -1,0 +1,21 @@
+{
+  "date": "2026-01-02T12:53:46.859382",
+  "results": [
+    {
+      "query_info": {
+        "query": "Kingston NY live music venues",
+        "region": "Hudson Valley",
+        "city": "Kingston"
+      },
+      "text": "\nBSP Kingston - Kingston, NY - Live music venue featuring indie and alternative acts.\nKeegan Ales - Kingston, NY - Brewery with live music on weekends.\nThe Anchor - Kingston, New York - Bar and music venue, seeking local musicians.\nStockade Tavern - Kingston - Historic tavern with occasional live music.\n"
+    },
+    {
+      "query_info": {
+        "query": "Woodstock NY jazz clubs",
+        "region": "Hudson Valley",
+        "city": "Woodstock"
+      },
+      "text": "\nThe Colony - Woodstock, NY - Legendary music venue, all genres welcome.\nBearsville Theater - Woodstock - Concert venue booking live music acts.\nLooking for musicians to play our new outdoor series this summer!\n"
+    }
+  ]
+}

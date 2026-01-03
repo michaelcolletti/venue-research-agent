@@ -1,0 +1,224 @@
+# Venue Scout Configuration
+# Research agent for finding performance venues
+
+[settings]
+default_radius_miles = 75
+base_zip = "12498"
+base_region = "Hudson Valley"
+state = "NY"
+keep_daily_results_days = 30
+report_day = "sunday"
+sources = ["google", "yelp", "songkick", "bandsintown", "local_news", "facebook_events" "kingstonhappenings" ]
+
+# ============================================================================
+# EXCLUDED VENUES - Non-responsive or problematic venues
+# ============================================================================
+[excluded]
+# Reasons: no_response, bad_experience, closed, not_booking, wrong_fit
+
+[[excluded.venues]]
+name = "Example Excluded Venue"
+city = "Kingston"
+reason = "no_response"
+date_excluded = "2025-01-01"
+notes = "No response after 3 follow-ups"
+
+# ============================================================================
+# ACT PROFILES
+# ============================================================================
+
+[acts.tree_of_life_trio]
+name = "Tree of Life Trio"
+genres = ["jazz", "soul", "funk", "R&B"]
+min_capacity = 50
+max_capacity = 500
+ideal_capacity = 150
+requires_stage = true
+requires_sound_system = true
+set_length_hours = 2
+members = 3
+venue_types = ["jazz club", "wine bar", "restaurant with live music", "brewery taproom", "winery", "art gallery"]
+available_days = ["thursday", "friday", "saturday", "sunday"]
+min_fee = 500
+max_fee = 2500
+notes = "Trio - piano/keys, bass, drums"
+
+[acts.cloudburst]
+name = "CloudBurst"
+genres = ["jazz-rock", "fusion", "progressive rock", "instrumental"]
+min_capacity = 150
+max_capacity = 1500
+ideal_capacity = 400
+requires_stage = true
+requires_sound_system = true
+set_length_hours = 2
+members = 5
+venue_types = ["music venue", "theater", "concert hall", "festival stage", "rock club"]
+available_days = ["friday", "saturday"]
+min_fee = 1500
+max_fee = 7000
+notes = "5-piece fusion - guitar, keys, bass, drums, sax"
+
+[acts.tillson_jazz_ensemble]
+name = "Tillson Jazz Ensemble"
+genres = ["jazz", "swing", "bebop", "standards"]
+min_capacity = 75
+max_capacity = 400
+ideal_capacity = 150
+requires_stage = true
+requires_sound_system = true
+set_length_hours = 2
+members = 5
+venue_types = ["jazz club", "wine bar", "restaurant", "hotel lounge", "concert hall"]
+available_days = ["thursday", "friday", "saturday", "sunday"]
+min_fee = 800
+max_fee = 3500
+notes = "Classic jazz quintet - piano, trumpet, sax, bass, drums"
+
+[acts.colletti]
+name = "Colletti"
+genres = ["experimental", "ambient", "solo bass", "electronic", "loop artist"]
+min_capacity = 30
+max_capacity = 300
+ideal_capacity = 100
+requires_stage = false
+requires_sound_system = true
+set_length_hours = 1.5
+members = 1
+venue_types = ["art gallery", "listening room", "experimental venue", "museum", "brewery", "wine bar"]
+available_days = ["wednesday", "thursday", "friday", "saturday", "sunday"]
+min_fee = 200
+max_fee = 1200
+notes = "Solo looping bass artist"
+
+[acts.mcgroovin]
+name = "McGroovin"
+genres = ["irish traditional", "celtic", "folk", "fusion"]
+min_capacity = 50
+max_capacity = 500
+ideal_capacity = 150
+requires_stage = false
+requires_sound_system = true
+set_length_hours = 3
+members = 5
+venue_types = ["irish pub", "tavern", "brewery", "community center", "cultural center", "festival"]
+available_days = ["thursday", "friday", "saturday", "sunday"]
+min_fee = 500
+max_fee = 3500
+notes = "Irish trad with funk - fiddle, flute, guitar, bass, drums"
+
+[acts.nail_thump_flow]
+name = "Nail, Thump and Flow"
+genres = ["progressive jazz", "fusion", "experimental", "avant-garde"]
+min_capacity = 100
+max_capacity = 800
+ideal_capacity = 250
+requires_stage = true
+requires_sound_system = true
+set_length_hours = 2
+members = 4
+venue_types = ["music venue", "jazz club", "listening room", "theater", "art space"]
+available_days = ["friday", "saturday"]
+min_fee = 1200
+max_fee = 6000
+notes = "Prog jazz quartet - guitar, keys, bass, drums"
+
+[acts.pablo_shine]
+name = "Pablo Shine Latin Jazz Band"
+genres = ["latin jazz", "afro-cuban", "salsa", "bossa nova"]
+min_capacity = 150
+max_capacity = 1500
+ideal_capacity = 400
+requires_stage = true
+requires_sound_system = true
+set_length_hours = 2.5
+members = 4
+venue_types = ["music venue", "dance club", "festival stage", "theater", "cultural center", "wedding venue"]
+available_days = ["friday", "saturday"]
+min_fee = 2000
+max_fee = 9000
+notes = "7-piece Latin jazz with full percussion"
+
+[acts.solo_acoustic]
+name = "Michael Colletti Solo"
+genres = ["acoustic", "singer-songwriter", "jazz standards", "americana", "ambient" ]
+min_capacity = 20
+max_capacity = 200
+ideal_capacity = 75
+requires_stage = false
+requires_sound_system = false
+set_length_hours = 2
+members = 1
+venue_types = ["coffee house", "wine bar", "restaurant", "bookstore", "farmers market", "house concert"]
+available_days = ["wednesday", "thursday", "friday", "saturday", "sunday"]
+min_fee = 150
+max_fee = 600
+notes = "Solo piano/vocal or acoustic guitar"
+
+[acts.full_band]
+name = "Tree of Life Band"
+genres = ["funk", "soul", "R&B", "dance", "party"]
+min_capacity = 150
+max_capacity = 2000
+ideal_capacity = 400
+requires_stage = true
+requires_sound_system = true
+set_length_hours = 3
+members = 6
+venue_types = ["music venue", "theater", "festival", "corporate event", "wedding venue", "brewery"]
+available_days = ["friday", "saturday"]
+min_fee = 2000
+max_fee = 8000
+notes = "6-piece funk/soul with horns"
+
+# ============================================================================
+# SEARCH REGIONS
+# ============================================================================
+
+[regions.hudson_valley]
+name = "Hudson Valley"
+counties = ["Ulster", "Dutchess", "Columbia", "Greene", "Orange", "Sullivan"]
+cities = ["Kingston", "Poughkeepsie", "Woodstock", "New Paltz", "Rhinebeck", "Hudson", "Beacon", "Catskill", "Saugerties", "Phoenicia", "Rosendale", "High Falls"]
+priority = 1
+
+[regions.capital_district]
+name = "Capital District"
+counties = ["Albany", "Schenectady", "Rensselaer", "Saratoga"]
+cities = ["Albany", "Saratoga Springs", "Schenectady", "Troy", "Clifton Park", "Glens Falls"]
+priority = 2
+
+[regions.catskills]
+name = "Catskills"
+counties = ["Delaware", "Sullivan", "Greene", "Ulster"]
+cities = ["Phoenicia", "Margaretville", "Tannersville", "Hunter", "Livingston Manor", "Roscoe", "Windham"]
+priority = 1
+
+[regions.nyc_metro]
+name = "NYC Metro"
+counties = ["Westchester", "Rockland", "Putnam"]
+cities = ["White Plains", "Tarrytown", "Nyack", "Peekskill", "Cold Spring", "Ossining"]
+priority = 3
+
+# ============================================================================
+# FILTERS & ALERTS
+# ============================================================================
+
+[filters]
+exclude_patterns = ["karaoke", "DJ only", "cover band only"]
+prefer_original_music = true
+min_rating = 3.5
+must_have_booking_contact = true
+
+[alerts]
+new_venue_opened = true
+seeking_artists_keywords = ["booking live music", "seeking musicians", "looking for bands", "live music wanted", "now booking"]
+capacity_threshold = 300
+
+# ============================================================================
+# SEARCH TEMPLATES
+# ============================================================================
+
+[search_templates]
+new_venues = ["{city} NY new live music venue 2024 2025", "{city} NY brewery taproom live music"]
+existing_venues = ["{city} NY live music venues", "{city} NY jazz clubs"]
+booking_opportunities = ["{city} NY venues looking for musicians", "{region} NY booking live music"]
