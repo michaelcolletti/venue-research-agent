@@ -8,7 +8,7 @@ base_region = "Hudson Valley"
 state = "NY"
 keep_daily_results_days = 30
 report_day = "sunday"
-sources = ["google", "yelp", "songkick", "bandsintown", "local_news", "facebook_events" "kingstonhappenings" ]
+sources = ["google", "yelp", "songkick", "bandsintown", "local_news", "facebook_events", "kingstonhappenings" ]
 
 # ============================================================================
 # EXCLUDED VENUES - Non-responsive or problematic venues
