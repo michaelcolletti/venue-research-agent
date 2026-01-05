@@ -18,6 +18,38 @@ Automated festival submission system for managing multiple musical acts and thei
 
 ## Quick Start
 
+### Recommended: Use Make Commands
+
+The easiest way to use festival-submit is with the included Makefile:
+
+```bash
+# One-time setup (creates venv, installs dependencies, initializes database)
+make setup
+
+# List all acts and festivals
+make acts
+make festivals
+
+# Find matching festivals for an act
+make match ACT='cloudburst'
+
+# Create a submission
+make submit ACT='tree_of_life_trio' FEST='regional.saratoga_jazz'
+
+# Check submission status
+make status
+
+# Generate reports
+make report-status
+make report-opps ACT='pablo_shine'
+make calendar
+
+# View all commands
+make help
+```
+
+### Manual Commands (without Make)
+
 ```bash
 # Initialize database
 python3 festival_submit.py init
@@ -49,7 +81,26 @@ python3 festival_submit.py render --template festival_submission_jazz \
 
 ## Automation
 
-### Daily/Weekly Automation
+### Daily/Weekly Automation with Make
+
+```bash
+# Run all automation tasks
+make automation
+
+# Run daily tasks only
+make daily
+
+# Run weekly tasks (reports)
+make weekly
+
+# Check upcoming deadlines
+make check-deadlines
+
+# Setup cron automation
+make setup-cron
+```
+
+### Manual Automation Commands
 
 ```bash
 # Run all automation tasks
@@ -60,11 +111,7 @@ python3 scheduler.py --daily
 
 # Run weekly tasks (reports)
 python3 scheduler.py --weekly
-```
 
-### Notifications
-
-```bash
 # Check deadlines and send notifications
 python3 notifications.py --check
 
@@ -77,7 +124,13 @@ python3 notifications.py --test
 
 ### Cron Setup
 
-Add to crontab (`crontab -e`):
+Use Make to setup cron automation:
+
+```bash
+make setup-cron
+```
+
+Or manually add to crontab (`crontab -e`):
 
 ```cron
 # Daily at 9am

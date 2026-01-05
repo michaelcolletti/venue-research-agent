@@ -1,16 +1,7 @@
 {
   "permissions": {
     "allow": [
-      "Bash(if [ -f \"../requirements.txt\" ])",
-      "Bash(then cat \"../requirements.txt\")",
-      "Bash(else echo \"No requirements.txt found\")",
-      "Bash(fi)",
-      "Bash(pip3 list:*)",
-      "Bash(sqlite3:*)",
-      "Bash(git checkout:*)",
-      "Bash(git add:*)",
-      "Bash(git commit -m \"$\\(cat <<''EOF''\nExtend setup wizard to support any US state\n\nChanges from NY-only to multi-state support:\n- Remove NY state validation, accept any US state\n- Auto-detect cities in the detected state \\(not just NY\\)\n- Generate state-specific search templates\n- County-based region creation for non-NY states\n- Update UI text from \"New York State\" to \"United States\"\n- Pass state code through entire config generation pipeline\n\nModified files:\n- setup_wizard.py: Remove NY validation, add state parameter\n- utils/config_generator.py: Dynamic state in TOML generation\n- templates/wizard.html: Update description text\n- static/wizard.js: Include state in form data, dynamic region naming\n- CLAUDE.md: Update documentation for multi-state support\n\nBackward compatible: NY counties still use named regions\n\\(Hudson Valley, Capital District, etc.\\), other states use\ncounty-based regions \\(e.g., \"Los Angeles Area\"\\)\n\n🤖 Generated with [Claude Code]\\(https://claude.com/claude-code\\)\n\nCo-Authored-By: Claude Sonnet 4.5 <noreply@anthropic.com>\nEOF\n\\)\")",
-      "Bash(git push:*)"
+      "Bash(make:*)"
     ]
   }
 }

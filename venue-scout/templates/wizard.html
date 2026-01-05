@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Venue Scout - Setup Wizard</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='wizard.css') }}">
+</head>
+<body>
+    <div class="wizard-container">
+        <!-- Header -->
+        <header class="wizard-header">
+            <h1>Venue Scout Setup Wizard</h1>
+            <p class="subtitle">Let's configure your venue research agent</p>
+        </header>
+
+        <!-- Progress Indicator -->
+        <div class="progress-bar">
+            <div class="progress-step active" data-step="1">
+                <div class="step-number">1</div>
+                <div class="step-label">Location</div>
+            </div>
+            <div class="progress-step" data-step="2">
+                <div class="step-number">2</div>
+                <div class="step-label">Your Acts</div>
+            </div>
+            <div class="progress-step" data-step="3">
+                <div class="step-number">3</div>
+                <div class="step-label">Review</div>
+            </div>
+        </div>
+
+        <!-- Wizard Steps -->
+        <div class="wizard-content">
+
+            <!-- STEP 1: Location Setup -->
+            <div class="wizard-step active" id="step-1">
+                <h2>Where are you based?</h2>
+                <p class="step-description">We'll find performance venues near you anywhere in the United States</p>
+
+                <div class="form-group">
+                    <label for="zip-code">Enter your zip code:</label>
+                    <div class="input-group">
+                        <input type="text"
+                               id="zip-code"
+                               placeholder="e.g., 12498"
+                               maxlength="5"
+                               pattern="[0-9]{5}"
+                               required>
+                        <button type="button" id="lookup-btn" class="btn btn-secondary">Lookup</button>
+                    </div>
+                    <div class="error-message" id="zip-error"></div>
+                </div>
+
+                <div id="location-results" class="hidden">
+                    <div class="info-box success">
+                        <h3>Location Detected</h3>
+                        <p><strong>City:</strong> <span id="detected-city"></span></p>
+                        <p><strong>County:</strong> <span id="detected-county"></span></p>
+                        <p><strong>Region:</strong> <span id="detected-region"></span></p>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="radius">Search Radius:</label>
+                        <div class="slider-group">
+                            <input type="range"
+                                   id="radius"
+                                   min="25"
+                                   max="150"
+                                   value="75"
+                                   step="5">
+                            <span class="slider-value"><span id="radius-value">75</span> miles</span>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Select cities to search:</label>
+                        <div class="city-selection-header">
+                            <button type="button" id="select-all-cities" class="btn-link">Select All</button>
+                            <button type="button" id="deselect-all-cities" class="btn-link">Deselect All</button>
+                            <span id="city-count" class="city-count"></span>
+                        </div>
+                        <div id="cities-list" class="checkbox-grid">
+                            <!-- Cities will be populated here -->
+                        </div>
+                        <div class="error-message" id="cities-error"></div>
+                    </div>
+                </div>
+
+                <div class="wizard-actions">
+                    <button type="button" class="btn btn-primary" id="next-to-acts" disabled>
+                        Continue to Acts →
+                    </button>
+                </div>
+            </div>
+
+            <!-- STEP 2: Act Profiles -->
+            <div class="wizard-step" id="step-2">
+                <h2>Tell us about your music acts</h2>
+                <p class="step-description">Add one or more act profiles for venue matching</p>
+
+                <div id="acts-container">
+                    <!-- Act forms will be added here dynamically -->
+                </div>
+
+                <button type="button" id="add-act-btn" class="btn btn-secondary">
+                    + Add Another Act
+                </button>
+
+                <div class="wizard-actions">
+                    <button type="button" class="btn btn-secondary" id="back-to-location">
+                        ← Back
+                    </button>
+                    <button type="button" class="btn btn-primary" id="next-to-review">
+                        Continue to Review →
+                    </button>
+                </div>
+            </div>
+
+            <!-- STEP 3: Review & Save -->
+            <div class="wizard-step" id="step-3">
+                <h2>Review Your Configuration</h2>
+                <p class="step-description">Check everything looks good before saving</p>
+
+                <div class="review-section">
+                    <h3>Location Settings</h3>
+                    <div class="review-item">
+                        <span class="review-label">Base Location:</span>
+                        <span id="review-location"></span>
+                    </div>
+                    <div class="review-item">
+                        <span class="review-label">Search Radius:</span>
+                        <span id="review-radius"></span>
+                    </div>
+                    <div class="review-item">
+                        <span class="review-label">Cities Selected:</span>
+                        <span id="review-cities-count"></span>
+                    </div>
+                </div>
+
+                <div class="review-section">
+                    <h3>Act Profiles</h3>
+                    <div id="review-acts">
+                        <!-- Acts will be listed here -->
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <button type="button" id="preview-config-btn" class="btn btn-secondary">
+                        Preview Configuration File
+                    </button>
+                </div>
+
+                <div class="form-group">
+                    <label class="checkbox-label">
+                        <input type="checkbox" id="init-db-checkbox" checked>
+                        Initialize database after saving
+                    </label>
+                </div>
+
+                <div class="wizard-actions">
+                    <button type="button" class="btn btn-secondary" id="back-to-acts">
+                        ← Back to Edit
+                    </button>
+                    <button type="button" class="btn btn-primary btn-large" id="save-config-btn">
+                        Save & Launch
+                    </button>
+                </div>
+            </div>
+
+            <!-- SUCCESS PAGE -->
+            <div class="wizard-step" id="step-success">
+                <div class="success-page">
+                    <div class="success-icon">✓</div>
+                    <h2>Configuration Complete!</h2>
+                    <p class="success-message">Your venue-scout is ready to use</p>
+
+                    <div class="info-box">
+                        <h3>Next Steps</h3>
+                        <ol class="next-steps">
+                            <li>
+                                <strong>Run your first search:</strong>
+                                <code>python venue_scout.py --daily</code>
+                            </li>
+                            <li>
+                                <strong>View configured acts:</strong>
+                                <code>python venue_scout.py --list-acts</code>
+                            </li>
+                            <li>
+                                <strong>Generate weekly reports:</strong>
+                                <code>python venue_scout.py --weekly-report</code>
+                            </li>
+                        </ol>
+                    </div>
+
+                    <div class="config-info">
+                        <p><strong>Configuration saved to:</strong></p>
+                        <code id="config-path-display"></code>
+
+                        <div id="db-status" class="hidden">
+                            <p><strong>Database initialized at:</strong></p>
+                            <code>data/venues.db</code>
+                        </div>
+
+                        <div id="backup-info" class="hidden">
+                            <p class="info-text">Previous configuration backed up</p>
+                        </div>
+                    </div>
+
+                    <button type="button" class="btn btn-secondary" onclick="location.reload()">
+                        Start Over
+                    </button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Preview Modal -->
+    <div id="preview-modal" class="modal hidden">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>Configuration Preview</h3>
+                <button type="button" class="modal-close" id="close-preview">&times;</button>
+            </div>
+            <div class="modal-body">
+                <pre id="preview-content"></pre>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" id="close-preview-btn">Close</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Loading Overlay -->
+    <div id="loading-overlay" class="loading-overlay hidden">
+        <div class="spinner"></div>
+        <p id="loading-text">Processing...</p>
+    </div>
+
+    <!-- Act Profile Template (hidden, cloned for each act) -->
+    <template id="act-template">
+        <div class="act-form">
+            <div class="act-form-header">
+                <h3>Act #<span class="act-number">1</span></h3>
+                <button type="button" class="remove-act-btn btn-link-danger">Remove</button>
+            </div>
+
+            <div class="form-row">
+                <div class="form-group">
+                    <label>Act Name <span class="required">*</span></label>
+                    <input type="text" class="act-name" placeholder="e.g., Tree of Life Trio" required>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label>Genres <span class="required">*</span> (select all that apply)</label>
+                <div class="checkbox-grid">
+                    <label><input type="checkbox" value="jazz"> Jazz</label>
+                    <label><input type="checkbox" value="rock"> Rock</label>
+                    <label><input type="checkbox" value="soul"> Soul/R&B</label>
+                    <label><input type="checkbox" value="funk"> Funk</label>
+                    <label><input type="checkbox" value="folk"> Folk</label>
+                    <label><input type="checkbox" value="blues"> Blues</label>
+                    <label><input type="checkbox" value="latin"> Latin</label>
+                    <label><input type="checkbox" value="classical"> Classical</label>
+                    <label><input type="checkbox" value="electronic"> Electronic</label>
+                    <label><input type="checkbox" value="country"> Country</label>
+                    <label><input type="checkbox" value="indie"> Indie</label>
+                    <label><input type="checkbox" value="experimental"> Experimental</label>
+                </div>
+            </div>
+
+            <div class="form-row">
+                <div class="form-group">
+                    <label>Band Size <span class="required">*</span></label>
+                    <input type="number" class="act-members" min="1" max="20" value="3" required>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label>Venue Capacity Range <span class="required">*</span></label>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label>Min</label>
+                        <input type="number" class="act-min-capacity" min="0" value="50" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Ideal</label>
+                        <input type="number" class="act-ideal-capacity" min="0" value="150" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Max</label>
+                        <input type="number" class="act-max-capacity" min="0" value="500" required>
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label>Performance Fee Range <span class="required">*</span></label>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label>Min Fee ($)</label>
+                        <input type="number" class="act-min-fee" min="0" value="500" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Max Fee ($)</label>
+                        <input type="number" class="act-max-fee" min="0" value="2500" required>
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label>Available Days <span class="required">*</span></label>
+                <div class="checkbox-grid">
+                    <label><input type="checkbox" value="monday"> Monday</label>
+                    <label><input type="checkbox" value="tuesday"> Tuesday</label>
+                    <label><input type="checkbox" value="wednesday"> Wednesday</label>
+                    <label><input type="checkbox" value="thursday"> Thursday</label>
+                    <label><input type="checkbox" value="friday"> Friday</label>
+                    <label><input type="checkbox" value="saturday"> Saturday</label>
+                    <label><input type="checkbox" value="sunday"> Sunday</label>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label>Preferred Venue Types <span class="required">*</span></label>
+                <div class="checkbox-grid">
+                    <label><input type="checkbox" value="jazz club"> Jazz Club</label>
+                    <label><input type="checkbox" value="music venue"> Music Venue</label>
+                    <label><input type="checkbox" value="wine bar"> Wine Bar</label>
+                    <label><input type="checkbox" value="restaurant"> Restaurant</label>
+                    <label><input type="checkbox" value="brewery"> Brewery</label>
+                    <label><input type="checkbox" value="coffee house"> Coffee House</label>
+                    <label><input type="checkbox" value="theater"> Theater</label>
+                    <label><input type="checkbox" value="art gallery"> Art Gallery</label>
+                    <label><input type="checkbox" value="festival"> Festival</label>
+                    <label><input type="checkbox" value="hotel lounge"> Hotel Lounge</label>
+                    <label><input type="checkbox" value="listening room"> Listening Room</label>
+                    <label><input type="checkbox" value="winery"> Winery</label>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label>Notes (optional)</label>
+                <textarea class="act-notes" rows="2" placeholder="Any additional information about this act"></textarea>
+            </div>
+        </div>
+    </template>
+
+    <script src="{{ url_for('static', filename='wizard.js') }}"></script>
+</body>
+</html>

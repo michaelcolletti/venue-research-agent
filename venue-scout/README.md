@@ -1,6 +1,6 @@
 # Venue Scout 🎵
 
-Research agent for finding new and existing performance venues in NY State.
+Research agent for finding new and existing performance venues across the United States.
 
 ## Configured Acts
 
@@ -18,6 +18,46 @@ Research agent for finding new and existing performance venues in NY State.
 
 ## Quick Start
 
+### Recommended: Use Make Commands
+
+The easiest way to use venue-scout is with the included Makefile:
+
+```bash
+# One-time setup (creates venv, installs dependencies, initializes database)
+make setup
+
+# Run the setup wizard
+make wizard
+
+# Daily operations
+make run-daily      # Complete daily workflow (search + process)
+make weekly-report  # Generate weekly report
+
+# View all commands
+make help
+```
+
+### For Non-Technical Users: Setup Wizard
+
+Use the interactive web-based setup wizard to configure venue-scout (works for any US state):
+
+```bash
+# With Make
+make wizard
+
+# Or manually
+pip install flask uszipcode
+python setup_wizard.py
+# Opens browser at http://localhost:5000
+```
+
+The wizard will guide you through:
+1. Entering your zip code and selecting nearby cities
+2. Creating act profiles with genres, fees, and venue preferences
+3. Generating configuration automatically
+
+### Manual Commands (without Make)
+
 ```bash
 # Initialize database
 python venue_scout.py --init-db
@@ -33,6 +73,16 @@ python venue_scout.py --weekly-report
 
 # Export venues
 python venue_scout.py --export json
+```
+
+## Dependencies
+
+```bash
+# Core dependencies
+pip install anthropic  # For Claude API searches
+
+# Setup wizard dependencies (optional, only if using wizard)
+pip install flask uszipcode
 ```
 
 ## Exclude Non-Responsive Venues

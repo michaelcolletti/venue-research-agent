@@ -114,31 +114,36 @@ def extract_opportunities(text: str, config: dict) -> list[dict]:
 def process_daily_results(results_file: Path, config: dict):
     """Process search results from a daily run."""
     print(f"Processing results from: {results_file}")
-    
+
     with open(results_file) as f:
         results_data = json.load(f)
-    
+
     conn = sqlite3.connect(DB_PATH)
     cursor = conn.cursor()
-    
+
+    # Get state from config
+    state = config.get("settings", {}).get("state", "NY")
+
     stats = {
         "results_processed": 0,
         "venues_found": 0,
         "new_venues": 0,
         "opportunities": 0
     }
-    
+
     for result in results_data.get("results", []):
         stats["results_processed"] += 1
-        
+
         query_info = result.get("query_info", {})
         search_text = result.get("text", "")
-        
+
         # Parse for venues
         venues = parse_search_results(search_text, query_info)
         stats["venues_found"] += len(venues)
-        
+
         for venue in venues:
+            # Add state to venue data
+            venue["state"] = state
             venue_id = generate_venue_id(venue["name"], venue["city"])
             
             # Check if new
@@ -147,10 +152,10 @@ def process_daily_results(results_file: Path, config: dict):
                 stats["new_venues"] += 1
                 today = datetime.now().strftime("%Y-%m-%d")
                 cursor.execute("""
-                    INSERT INTO venues (id, name, city, region, source, first_seen, last_seen)
-                    VALUES (?, ?, ?, ?, ?, ?, ?)
+                    INSERT INTO venues (id, name, city, region, state, source, first_seen, last_seen)
+                    VALUES (?, ?, ?, ?, ?, ?, ?, ?)
                 """, (venue_id, venue["name"], venue["city"], venue["region"],
-                      venue["source"], today, today))
+                      venue.get("state"), venue["source"], today, today))
         
         # Extract opportunities
         opportunities = extract_opportunities(search_text, config)

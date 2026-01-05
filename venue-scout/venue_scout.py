@@ -247,14 +247,15 @@ def save_venue(conn: sqlite3.Connection, venue: dict) -> str:
     else:
         # Insert new venue
         cursor.execute("""
-            INSERT INTO venues (id, name, city, region, venue_type, website, 
+            INSERT INTO venues (id, name, city, region, state, venue_type, website,
                                source, source_url, first_seen, last_seen, genres)
-            VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+            VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
         """, (
             venue_id,
             venue["name"],
             venue.get("city"),
             venue.get("region"),
+            venue.get("state"),  # Use state from venue dict if provided
             venue.get("venue_type"),
             venue.get("website"),
             venue.get("source"),
@@ -596,21 +597,25 @@ def add_venue_manual(config: dict, name: str, city: str, **kwargs):
     """Manually add a venue to the database."""
     init_database()
     conn = sqlite3.connect(DB_PATH)
-    
+
+    # Get state from kwargs or config
+    state = kwargs.get("state") or config.get("settings", {}).get("state", "NY")
+
     venue = {
         "name": name,
         "city": city,
         "region": kwargs.get("region"),
+        "state": state,
         "venue_type": kwargs.get("venue_type"),
         "website": kwargs.get("website"),
         "source": "manual",
         "genres": kwargs.get("genres", [])
     }
-    
+
     venue_id = save_venue(conn, venue)
     conn.close()
-    
-    print(f"Added venue: {name} ({city}) - ID: {venue_id}")
+
+    print(f"Added venue: {name} ({city}, {state}) - ID: {venue_id}")
     return venue_id
 
 

@@ -13,21 +13,34 @@ A comprehensive research and analysis tool for venue discovery and evaluation.
 ## 🚀 Getting Started
 
 ### Prerequisites
-- 🐍 Python 3.8+
+- 🐍 Python 3.11+
 - 📦 Required dependencies (see `requirements.txt`)
+- 🔧 Make (optional but recommended)
 
-### Installation
+### Quick Start with Make
+
+Both projects include comprehensive Makefiles for easy setup and operation:
+
+```bash
+# Venue Scout
+cd venue-scout
+make help          # See all available commands
+make setup         # Complete setup (venv + dependencies + database)
+make wizard        # Run setup wizard
+
+# Festival Submit
+cd festival-submit
+make help          # See all available commands
+make setup         # Complete setup (venv + dependencies + database)
+make acts          # List configured acts
+```
+
+### Manual Installation
 
 ```bash
 git clone https://github.com/michaelcolletti/venue-research-agent.git
 cd venue-research-agent
 pip install -r requirements.txt
-```
-
-### Usage
-
-```bash
-python main.py
 ```
 
 ## 📁 Project Structure
