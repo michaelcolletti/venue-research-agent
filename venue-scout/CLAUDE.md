@@ -16,13 +16,15 @@ python setup_wizard.py
 ```
 
 The wizard provides a user-friendly interface that:
-1. **Step 1: Location** - Enter your NY zip code, automatically discovers nearby cities within a customizable radius
+1. **Step 1: Location** - Enter your US zip code, automatically discovers nearby cities within a customizable radius (supports any state)
 2. **Step 2: Acts** - Add one or more act profiles with guided forms for all required fields
 3. **Step 3: Review** - Preview and save configuration, optionally initialize database
 
 **Benefits:**
+- Works with any US state (not limited to NY)
 - No need to understand TOML format or edit config files manually
-- Auto-detects region based on zip code
+- Auto-detects region based on county/zip code
+- Generates state-specific search templates
 - Validates all inputs before saving
 - Creates backup of existing config
 - Works on mobile and desktop browsers

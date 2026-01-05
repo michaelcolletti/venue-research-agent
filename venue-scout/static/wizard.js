@@ -397,7 +397,7 @@ function collectActsData() {
 function populateReview() {
     // Location info
     document.getElementById('review-location').textContent =
-        `${state.locationData.city}, NY (${document.getElementById('zip-code').value})`;
+        `${state.locationData.city}, ${state.locationData.state} (${document.getElementById('zip-code').value})`;
 
     document.getElementById('review-radius').textContent =
         `${document.getElementById('radius').value} miles`;
@@ -506,6 +506,7 @@ async function saveConfig() {
 function collectFormData() {
     return {
         zip_code: document.getElementById('zip-code').value.trim(),
+        state: state.locationData.state,
         base_region: getRegionName(state.locationData.county),
         radius: parseInt(document.getElementById('radius').value),
         cities_with_counties: state.selectedCities,
@@ -518,6 +519,7 @@ function collectFormData() {
 // ============================================================================
 
 function getRegionName(county) {
+    // NY-specific region mappings (for backward compatibility)
     const regionMap = {
         'Ulster': 'Hudson Valley',
         'Dutchess': 'Hudson Valley',
@@ -535,7 +537,8 @@ function getRegionName(county) {
         'Putnam': 'NYC Metro'
     };
 
-    return regionMap[county] || 'Custom Region';
+    // Use mapped region if available, otherwise create county-based region name
+    return regionMap[county] || (county ? `${county} Area` : 'Custom Region');
 }
 
 function showError(element, message) {

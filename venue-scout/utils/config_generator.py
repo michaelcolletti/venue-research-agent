@@ -50,7 +50,7 @@ def format_toml_string(value: str) -> str:
 
 def validate_settings(data: Dict[str, Any]) -> tuple[bool, str]:
     """Validate settings section data."""
-    required_fields = ['zip_code', 'base_region', 'radius']
+    required_fields = ['zip_code', 'base_region', 'radius', 'state']
 
     for field in required_fields:
         if field not in data or not data[field]:
@@ -59,6 +59,10 @@ def validate_settings(data: Dict[str, Any]) -> tuple[bool, str]:
     # Validate zip code format
     if not data['zip_code'].isdigit() or len(data['zip_code']) != 5:
         return False, "Invalid zip code format (must be 5 digits)"
+
+    # Validate state format (2-letter code)
+    if len(data['state']) != 2 or not data['state'].isalpha():
+        return False, "Invalid state format (must be 2-letter code, e.g., NY, CA)"
 
     # Validate radius
     try:
@@ -137,6 +141,9 @@ def detect_regions(cities_with_counties: List[Dict[str, str]]) -> Dict[str, Dict
     """
     Detect regions based on cities and their counties.
 
+    For NY state counties with known mappings, uses predefined regions.
+    For all other counties, creates a region per county.
+
     Args:
         cities_with_counties: List of dicts with 'city' and 'county' keys
 
@@ -152,14 +159,20 @@ def detect_regions(cities_with_counties: List[Dict[str, str]]) -> Dict[str, Dict
         if not city:
             continue
 
-        # Get region info from county mapping
+        # Get region info from county mapping (NY-specific) or create county-based region
         if county in COUNTY_TO_REGION:
             region_key, region_name, priority = COUNTY_TO_REGION[county]
         else:
-            # Default to custom region
-            region_key = "custom_region"
-            region_name = "Custom Region"
-            priority = 5
+            # Create region based on county name for any state
+            if county:
+                region_key = county.lower().replace(' ', '_').replace('-', '_')
+                region_key = ''.join(c for c in region_key if c.isalnum() or c == '_')
+                region_name = f"{county} Area"
+                priority = 2  # Default medium priority
+            else:
+                region_key = "unknown_region"
+                region_name = "Unknown Region"
+                priority = 5
 
         # Initialize region if not exists
         if region_key not in regions:
@@ -212,7 +225,7 @@ def generate_venues_toml(form_data: Dict[str, Any]) -> str:
     toml_lines.append(f'default_radius_miles = {form_data["radius"]}')
     toml_lines.append(f'base_zip = "{form_data["zip_code"]}"')
     toml_lines.append(f'base_region = "{format_toml_string(form_data["base_region"])}"')
-    toml_lines.append('state = "NY"')
+    toml_lines.append(f'state = "{form_data["state"]}"')
     toml_lines.append("keep_daily_results_days = 30")
     toml_lines.append('report_day = "sunday"')
     toml_lines.append('sources = ["google", "yelp", "songkick", "bandsintown", "local_news", "facebook_events"]')
@@ -312,10 +325,13 @@ def generate_venues_toml(form_data: Dict[str, Any]) -> str:
     toml_lines.append("# SEARCH TEMPLATES")
     toml_lines.append("# ============================================================================")
     toml_lines.append("")
+    # Get state abbreviation for search templates
+    state_abbr = form_data.get("state", "NY")
+
     toml_lines.append("[search_templates]")
-    toml_lines.append('new_venues = ["{city} NY new live music venue 2024 2025", "{city} NY brewery taproom live music"]')
-    toml_lines.append('existing_venues = ["{city} NY live music venues", "{city} NY jazz clubs"]')
-    toml_lines.append('booking_opportunities = ["{city} NY venues looking for musicians", "{region} NY booking live music"]')
+    toml_lines.append(f'new_venues = ["{{city}} {state_abbr} new live music venue 2024 2025", "{{city}} {state_abbr} brewery taproom live music"]')
+    toml_lines.append(f'existing_venues = ["{{city}} {state_abbr} live music venues", "{{city}} {state_abbr} jazz clubs"]')
+    toml_lines.append(f'booking_opportunities = ["{{city}} {state_abbr} venues looking for musicians", "{{region}} {state_abbr} booking live music"]')
     toml_lines.append("")
 
     return '\n'.join(toml_lines)

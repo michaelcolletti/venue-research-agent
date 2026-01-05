@@ -92,15 +92,14 @@ def lookup_zip():
                 'error': 'Zip code not found'
             })
 
-        # Validate NY state only
-        if result.state != 'NY':
+        if not result.state:
             return jsonify({
                 'success': False,
-                'error': f'Only NY state is supported (detected: {result.state})'
+                'error': 'Could not determine state for this zip code'
             })
 
-        # Get nearby cities
-        nearby_cities = get_nearby_cities(result.lat, result.lng, radius)
+        # Get nearby cities in the same state
+        nearby_cities = get_nearby_cities(result.lat, result.lng, radius, result.state)
 
         return jsonify({
             'success': True,
@@ -119,14 +118,15 @@ def lookup_zip():
         })
 
 
-def get_nearby_cities(lat, lng, radius_miles):
+def get_nearby_cities(lat, lng, radius_miles, state):
     """
-    Find all NY cities within radius of given coordinates.
+    Find all cities within radius of given coordinates in the specified state.
 
     Args:
         lat: Latitude
         lng: Longitude
         radius_miles: Search radius in miles
+        state: 2-letter state code (e.g., 'NY', 'CA')
 
     Returns:
         List of dicts with city and county information
@@ -140,11 +140,12 @@ def get_nearby_cities(lat, lng, radius_miles):
             returns=1000  # Get many results, we'll filter
         )
 
-        # Extract unique cities in NY
+        # Extract unique cities in the specified state
         cities_map = {}  # city -> {county, ...}
 
         for zip_result in nearby_zips:
-            if zip_result.state != 'NY':
+            # Filter to only the specified state
+            if zip_result.state != state:
                 continue
 
             city = zip_result.major_city or zip_result.post_office_city
