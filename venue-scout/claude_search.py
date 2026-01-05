@@ -66,9 +66,9 @@ def build_search_queries(config: dict, limit: int = 10) -> list[dict]:
 
 def search_with_claude(client: Anthropic, query: str, query_info: dict) -> dict:
     """Execute a single search using Claude with web search tool."""
-    
-    system_prompt = """You are a venue research assistant helping a musician find 
-performance venues in New York State. When searching, focus on:
+
+    system_prompt = """You are a venue research assistant helping a musician find
+performance venues. When searching, focus on:
 - Live music venues, bars, restaurants with live music
 - Capacity and venue type when available
 - Booking contact information if found

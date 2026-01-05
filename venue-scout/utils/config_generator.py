@@ -329,7 +329,7 @@ def generate_venues_toml(form_data: Dict[str, Any]) -> str:
     state_abbr = form_data.get("state", "NY")
 
     toml_lines.append("[search_templates]")
-    toml_lines.append(f'new_venues = ["{{city}} {state_abbr} new live music venue 2024 2025", "{{city}} {state_abbr} brewery taproom live music"]')
+    toml_lines.append(f'new_venues = ["{{city}} {state_abbr} new live music venue 2025 2026", "{{city}} {state_abbr} brewery taproom live music"]')
     toml_lines.append(f'existing_venues = ["{{city}} {state_abbr} live music venues", "{{city}} {state_abbr} jazz clubs"]')
     toml_lines.append(f'booking_opportunities = ["{{city}} {state_abbr} venues looking for musicians", "{{region}} {state_abbr} booking live music"]')
     toml_lines.append("")

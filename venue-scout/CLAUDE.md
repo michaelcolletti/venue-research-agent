@@ -121,11 +121,12 @@ The codebase uses three main Python scripts that work together in a pipeline:
 
 SQLite database (`data/venues.db`) with five core tables:
 
-- **venues** - Core venue information (name, city, region, type, capacity, contact info, genres)
+- **venues** - Core venue information (name, city, region, state, type, capacity, contact info, genres)
   - Primary key: MD5 hash of `name:city` (12 chars)
   - Unique constraint on (name, city)
   - Tracks first_seen, last_seen dates
   - Status field: active, closed, unverified, excluded
+  - State field: 2-letter state code (defaults to 'NY' for legacy compatibility)
 
 - **search_results** - Raw daily search findings (linked to venues via foreign key)
 
@@ -214,6 +215,9 @@ Weekly reports calculate date ranges as "last Monday through Sunday", query data
 - Uses Python 3.11+ features: `tomllib` (built-in TOML parser), `match/case` not used but could be
 - All dates stored as strings in ISO format (YYYY-MM-DD)
 - Genres and suitable_acts stored as JSON arrays in TEXT columns
-- Claude API integration uses `claude-sonnet-4-20250514` model with web_search tool
+- Claude API integration:
+  - Model: `claude-sonnet-4-20250514` (as of May 2025 - update to latest available model as needed)
+  - Web search tool: `web_search_20250305` (March 2025 version - update to latest available version as needed)
+  - See claude_search.py:92-96 for implementation
 - Search result parsing uses regex patterns to extract venue names from unstructured text
 - Cron integration via generated bash script with daily runs and Sunday weekly reports
