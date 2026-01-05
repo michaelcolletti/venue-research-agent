@@ -1,0 +1,9 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(venv/bin/pip:*)",
+      "Bash(timeout 10 make:*)",
+      "Bash(venv/bin/python:*)"
+    ]
+  }
+}
