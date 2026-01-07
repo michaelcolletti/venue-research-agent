@@ -37,7 +37,7 @@ requires_stage = true
 requires_sound_system = true
 set_length_hours = 2
 members = 3
-venue_types = ["jazz club", "wine bar", "restaurant with live music", "brewery taproom", "winery", "art gallery"]
+venue_types = ["jazz club", "wine bar", "restaurant with live music", "brewery taproom", "jazz brunch", "winery", "art gallery"]
 available_days = ["thursday", "friday", "saturday", "sunday"]
 min_fee = 500
 max_fee = 2500
@@ -45,7 +45,7 @@ notes = "Trio - piano/keys, bass, drums"
 
 [acts.cloudburst]
 name = "CloudBurst"
-genres = ["jazz-rock", "fusion", "progressive rock", "instrumental"]
+genres = ["jazz-rock", "fusion", "progressive rock", "funk jazz", "instrumental"]
 min_capacity = 150
 max_capacity = 1500
 ideal_capacity = 400
@@ -68,9 +68,9 @@ ideal_capacity = 150
 requires_stage = true
 requires_sound_system = true
 set_length_hours = 2
-members = 5
-venue_types = ["jazz club", "wine bar", "restaurant", "hotel lounge", "concert hall"]
-available_days = ["thursday", "friday", "saturday", "sunday"]
+members = 4
+venue_types = ["jazz club", "wine bar", "restaurant", "hotel lounge", "concert hall", "listening space"]
+available_days = ["monday", "tuesday", "wednesday", "thursday", "friday", "saturday", "sunday"]
 min_fee = 800
 max_fee = 3500
 notes = "Classic jazz quintet - piano, trumpet, sax, bass, drums"
@@ -222,3 +222,47 @@ capacity_threshold = 300
 new_venues = ["{city} NY new live music venue 2024 2025", "{city} NY brewery taproom live music"]
 existing_venues = ["{city} NY live music venues", "{city} NY jazz clubs"]
 booking_opportunities = ["{city} NY venues looking for musicians", "{region} NY booking live music"]
+
+# ============================================================================
+# SEARCH PROVIDER CONFIGURATION (Multi-Provider Support)
+# ============================================================================
+# Configure which LLM provider to use for venue searches
+# Options: "claude", "openrouter", "ollama", "mcp"
+
+[search_provider]
+# Primary provider (default: claude)
+default_provider = "claude"
+
+# Fallback providers if primary fails (optional)
+# fallback_providers = ["openrouter", "ollama"]
+
+# Claude provider settings (Anthropic)
+[search_provider.claude]
+model = "claude-sonnet-4-20250514"
+max_tokens = 2000
+# web_search_tool_version = "web_search_20250305"  # Optional override
+
+# OpenRouter provider settings (multiple models with web search)
+[search_provider.openrouter]
+model = "openai/gpt-4o:online"  # :online suffix enables web search via Exa.ai
+max_tokens = 2000
+max_search_results = 5
+
+# Ollama provider settings (local models)
+[search_provider.ollama]
+model = "llama3.1:latest"
+base_url = "http://localhost:11434"
+max_tokens = 2000
+enable_web_search = true
+
+# MCP provider settings (Model Context Protocol with universal web search)
+[search_provider.mcp]
+server_type = "websearch-mcp"  # Options: websearch-mcp, serpapi, brave, custom
+model = "claude-sonnet-4-20250514"  # LLM to use for analyzing search results
+max_results = 10
+max_tokens = 2000
+
+# Custom MCP server configuration (if using custom server)
+# [search_provider.mcp.server_config]
+# server_executable = "/path/to/mcp-server"
+# server_args = ["--arg1", "value1"]

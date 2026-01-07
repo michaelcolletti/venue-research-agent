@@ -38,6 +38,164 @@ The wizard provides a user-friendly interface that:
 
 The wizard generates `config/venues.toml` matching the exact schema expected by the venue-scout system.
 
+## Multi-Provider LLM Support
+
+**NEW**: Venue-scout now supports multiple LLM providers for web searches, not just Claude! Choose from:
+- **Claude** (Anthropic) - Native web search, most reliable
+- **OpenRouter** - Access to multiple models (GPT-4, Gemini, etc.) with web search via Exa.ai
+- **Ollama** - Free local models, privacy-focused (requires local installation)
+- **MCP** (Model Context Protocol) - Universal web search with any LLM
+
+### Quick Start with Different Providers
+
+```bash
+# Using Claude (default, existing behavior)
+export ANTHROPIC_API_KEY='sk-ant-...'
+python unified_search.py --daily
+
+# Using OpenRouter (free tier available, multiple models)
+export OPENROUTER_API_KEY='sk-or-...'
+python unified_search.py --daily --provider openrouter
+
+# Using Ollama (free, runs locally)
+ollama pull llama3.1:latest
+ollama serve
+python unified_search.py --daily --provider ollama
+
+# Using MCP (flexible, multiple search engines)
+npm install -g web-search-mcp
+export ANTHROPIC_API_KEY='sk-ant-...'  # or other LLM key
+python unified_search.py --daily --provider mcp
+```
+
+### Configuration
+
+Configure providers in `config/venues.toml`:
+
+```toml
+[search_provider]
+default_provider = "claude"  # or openrouter, ollama, mcp
+fallback_providers = ["openrouter", "ollama"]  # automatic fallback
+
+[search_provider.claude]
+model = "claude-sonnet-4-20250514"
+max_tokens = 2000
+
+[search_provider.openrouter]
+model = "openai/gpt-4o:online"  # :online enables web search
+max_tokens = 2000
+
+[search_provider.ollama]
+model = "llama3.1:latest"
+base_url = "http://localhost:11434"
+
+[search_provider.mcp]
+server_type = "websearch-mcp"  # or serpapi, brave
+model = "claude-sonnet-4-20250514"
+```
+
+### Provider Comparison
+
+| Provider | Cost | Web Search | Setup Complexity | Privacy |
+|----------|------|------------|------------------|---------|
+| **Claude** | $$ (API usage) | Native (included) | Easy (API key) | Cloud |
+| **OpenRouter** | $ (varies by model + $4/1000 search results) | Via Exa.ai | Easy (API key) | Cloud |
+| **Ollama** | Free (local compute) | Limited (via MCP) | Medium (local install) | Private |
+| **MCP** | Varies by server | Multiple engines | Advanced | Configurable |
+
+### Setup Instructions by Provider
+
+#### Claude (Anthropic)
+```bash
+# Get API key from https://console.anthropic.com/
+export ANTHROPIC_API_KEY='sk-ant-...'
+pip install anthropic
+
+# Run searches
+python unified_search.py --daily --provider claude
+```
+
+#### OpenRouter
+```bash
+# Get API key from https://openrouter.ai/ (free tier available)
+export OPENROUTER_API_KEY='sk-or-...'
+pip install openai
+
+# Run searches (web search via Exa.ai)
+python unified_search.py --daily --provider openrouter
+
+# Try different models
+# Edit config/venues.toml:
+#   [search_provider.openrouter]
+#   model = "google/gemini-2.0-flash-exp:online"  # or other :online model
+```
+
+#### Ollama (Local)
+```bash
+# Install Ollama from https://ollama.ai/
+# Download model
+ollama pull llama3.1:latest
+
+# Start Ollama service
+ollama serve
+
+# Install Python client
+pip install ollama
+
+# Run searches (uses local model)
+python unified_search.py --daily --provider ollama
+
+# Note: Ollama doesn't have native web search
+# For web search with Ollama, use MCP provider with Ollama as LLM
+```
+
+#### MCP (Model Context Protocol)
+```bash
+# Install MCP server (WebSearch-MCP is free, no API key)
+npm install -g web-search-mcp
+
+# Install MCP Python SDK
+pip install mcp
+
+# Install LLM client (Claude, OpenAI, etc.)
+pip install anthropic  # or openai
+export ANTHROPIC_API_KEY='sk-ant-...'
+
+# Run searches (MCP for search, LLM for analysis)
+python unified_search.py --daily --provider mcp
+
+# Alternative MCP servers:
+# SerpApi: npm install -g mcp-server-serpapi (requires SERPAPI_API_KEY)
+# Brave: npm install -g @modelcontextprotocol/server-brave-search (requires BRAVE_API_KEY)
+```
+
+### Migrating from claude_search.py
+
+The old `claude_search.py` still works but is deprecated. Migrate to `unified_search.py`:
+
+```bash
+# Old way (still works, shows deprecation warning)
+python claude_search.py --daily
+
+# New way (same behavior with Claude)
+python unified_search.py --daily --provider claude
+
+# Or use configured default provider
+python unified_search.py --daily
+```
+
+### Automatic Fallback
+
+Configure fallback providers in case the primary fails:
+
+```toml
+[search_provider]
+default_provider = "claude"
+fallback_providers = ["openrouter", "ollama"]  # tries these in order if Claude fails
+```
+
+The system will automatically try fallback providers if the primary is unavailable.
+
 ## Commands
 
 ### Daily Operations
@@ -45,13 +203,16 @@ The wizard generates `config/venues.toml` matching the exact schema expected by 
 # Initialize database (run once or to reset)
 python venue_scout.py --init-db
 
-# Run daily venue search (generates queries only)
-python venue_scout.py --daily --max-queries 20
+# Run daily venue search (NEW: multi-provider support)
+python unified_search.py --daily --max-queries 15
 
-# Run daily search with Claude API (executes actual web searches)
+# Or specify a specific provider
+python unified_search.py --daily --provider openrouter --max-queries 15
+
+# Legacy: Old Claude-only script (still works but deprecated)
 python claude_search.py --daily --max-queries 15
 
-# Process search results from Claude API
+# Process search results (works with all providers)
 python search_runner.py --process data/search_results/daily_*.json
 
 # Generate weekly report

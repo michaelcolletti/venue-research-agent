@@ -1,0 +1,67 @@
+# Venue Scout - Python Dependencies
+# Multi-Provider LLM Integration for venue research
+
+# Core Dependencies (required for basic functionality)
+# Note: tomllib is built-in for Python 3.11+
+
+# Provider: Claude (Anthropic)
+anthropic>=0.40.0
+
+# Provider: OpenRouter (uses OpenAI SDK)
+openai>=1.57.3
+
+# Provider: Ollama (local models)
+ollama>=0.4.6
+
+# Provider: MCP (Model Context Protocol)
+# Note: MCP is still evolving, version may need updates
+mcp>=1.4.0
+
+# Optional Dependencies for Setup Wizard
+flask>=3.0.0              # Web-based setup wizard
+uszipcode>=1.0.1          # US zip code lookup for wizard
+
+# Development/Testing (optional)
+# pytest>=7.4.0           # For running tests
+# black>=23.0.0           # Code formatting
+# mypy>=1.5.0             # Type checking
+
+# ============================================================================
+# Installation Instructions
+# ============================================================================
+#
+# Basic installation (all providers):
+#   pip install -r requirements.txt
+#
+# Minimal installation (Claude only):
+#   pip install anthropic
+#
+# For setup wizard:
+#   pip install anthropic flask uszipcode
+#
+# For local Ollama:
+#   pip install anthropic ollama
+#   # Also install Ollama from https://ollama.ai/
+#   ollama pull llama3.1:latest
+#
+# For MCP integration:
+#   pip install anthropic mcp
+#   npm install -g web-search-mcp  # Or other MCP server
+#
+# ============================================================================
+# Environment Variables Required
+# ============================================================================
+#
+# Claude:
+#   export ANTHROPIC_API_KEY='sk-ant-...'
+#
+# OpenRouter:
+#   export OPENROUTER_API_KEY='sk-or-...'
+#
+# Ollama (optional, defaults to localhost):
+#   export OLLAMA_HOST='http://localhost:11434'
+#
+# MCP (depends on server):
+#   export SERPAPI_API_KEY='...'  # If using SerpApi MCP server
+#   export BRAVE_API_KEY='...'    # If using Brave Search MCP server
+#

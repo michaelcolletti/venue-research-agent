@@ -73,7 +73,7 @@ $(VENV):
 	@echo "✓ Virtual environment created at $(VENV)/"
 	@echo "  Activate with: source $(VENV)/bin/activate"
 
-venv: $(VENV)
+venv: | $(VENV)
 
 # Installation targets
 install-core: $(VENV)

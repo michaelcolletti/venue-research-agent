@@ -29,8 +29,11 @@ class NotificationManager:
     def send_desktop(self, title, message):
         """Send macOS desktop notification"""
         try:
-            subprocess.run(["osascript", "-e", 
-                f'display notification "{message}" with title "{title}" sound name "Glass"'], check=True)
+            # Escape quotes and backslashes to prevent command injection
+            title_escaped = title.replace('\\', '\\\\').replace('"', '\\"')
+            message_escaped = message.replace('\\', '\\\\').replace('"', '\\"')
+            subprocess.run(["osascript", "-e",
+                f'display notification "{message_escaped}" with title "{title_escaped}" sound name "Glass"'], check=True)
             return True
         except: return False
         

@@ -139,11 +139,27 @@ class SubmissionDatabase:
         
     def get_submission_stats(self, act_id=None):
         c = self.conn.cursor()
-        q = "SELECT COUNT(*) FROM submissions" + (f" WHERE act_id='{act_id}'" if act_id else "")
-        c.execute(q); total = c.fetchone()[0]
-        c.execute(q.replace("COUNT(*)","COUNT(*)") + (" AND" if act_id else " WHERE") + " status='submitted'"); submitted = c.fetchone()[0]
-        c.execute(q.replace("COUNT(*)","COUNT(*)") + (" AND" if act_id else " WHERE") + " response_status='accepted'"); accepted = c.fetchone()[0]
-        c.execute(q.replace("COUNT(*)","COUNT(*)") + (" AND" if act_id else " WHERE") + " response_status='rejected'"); rejected = c.fetchone()[0]
+
+        # Use parameterized queries to prevent SQL injection
+        if act_id:
+            c.execute("SELECT COUNT(*) FROM submissions WHERE act_id=?", (act_id,))
+            total = c.fetchone()[0]
+            c.execute("SELECT COUNT(*) FROM submissions WHERE act_id=? AND status='submitted'", (act_id,))
+            submitted = c.fetchone()[0]
+            c.execute("SELECT COUNT(*) FROM submissions WHERE act_id=? AND response_status='accepted'", (act_id,))
+            accepted = c.fetchone()[0]
+            c.execute("SELECT COUNT(*) FROM submissions WHERE act_id=? AND response_status='rejected'", (act_id,))
+            rejected = c.fetchone()[0]
+        else:
+            c.execute("SELECT COUNT(*) FROM submissions")
+            total = c.fetchone()[0]
+            c.execute("SELECT COUNT(*) FROM submissions WHERE status='submitted'")
+            submitted = c.fetchone()[0]
+            c.execute("SELECT COUNT(*) FROM submissions WHERE response_status='accepted'")
+            accepted = c.fetchone()[0]
+            c.execute("SELECT COUNT(*) FROM submissions WHERE response_status='rejected'")
+            rejected = c.fetchone()[0]
+
         return {"total":total,"submitted":submitted,"accepted":accepted,"rejected":rejected,"pending":submitted-accepted-rejected}
 
 class TemplateEngine:

@@ -1,0 +1,202 @@
+{
+  "date": "2026-01-05T16:11:59.930777",
+  "queries_run": 15,
+  "successful": 0,
+  "results": [
+    {
+      "query_info": {
+        "query": "Kingston NY new live music venue 2024 2025",
+        "type": "new_venues",
+        "region": "Hudson Valley",
+        "city": "Kingston",
+        "priority": 1
+      },
+      "text": "",
+      "success": false,
+      "error": "Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'invalid x-api-key'}, 'request_id': 'req_011CWpvHYcDHLrNRFCHfS6UW'}",
+      "timestamp": "2026-01-05T16:11:58.220470"
+    },
+    {
+      "query_info": {
+        "query": "Kingston NY venues looking for musicians",
+        "type": "booking_opportunities",
+        "region": "Hudson Valley",
+        "city": "Kingston",
+        "priority": 1
+      },
+      "text": "",
+      "success": false,
+      "error": "Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'invalid x-api-key'}, 'request_id': 'req_011CWpvHZCvmy27uHprpaZMQ'}",
+      "timestamp": "2026-01-05T16:11:58.301561"
+    },
+    {
+      "query_info": {
+        "query": "Poughkeepsie NY new live music venue 2024 2025",
+        "type": "new_venues",
+        "region": "Hudson Valley",
+        "city": "Poughkeepsie",
+        "priority": 1
+      },
+      "text": "",
+      "success": false,
+      "error": "Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'invalid x-api-key'}, 'request_id': 'req_011CWpvHZfxrvJhvSVxzRrE9'}",
+      "timestamp": "2026-01-05T16:11:58.441165"
+    },
+    {
+      "query_info": {
+        "query": "Poughkeepsie NY venues looking for musicians",
+        "type": "booking_opportunities",
+        "region": "Hudson Valley",
+        "city": "Poughkeepsie",
+        "priority": 1
+      },
+      "text": "",
+      "success": false,
+      "error": "Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'invalid x-api-key'}, 'request_id': 'req_011CWpvHaEwWGuarBMk8Kn9W'}",
+      "timestamp": "2026-01-05T16:11:58.567994"
+    },
+    {
+      "query_info": {
+        "query": "Woodstock NY new live music venue 2024 2025",
+        "type": "new_venues",
+        "region": "Hudson Valley",
+        "city": "Woodstock",
+        "priority": 1
+      },
+      "text": "",
+      "success": false,
+      "error": "Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'invalid x-api-key'}, 'request_id': 'req_011CWpvHagjTmJ81JLfqQ6WC'}",
+      "timestamp": "2026-01-05T16:11:58.962421"
+    },
+    {
+      "query_info": {
+        "query": "Woodstock NY venues looking for musicians",
+        "type": "booking_opportunities",
+        "region": "Hudson Valley",
+        "city": "Woodstock",
+        "priority": 1
+      },
+      "text": "",
+      "success": false,
+      "error": "Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'invalid x-api-key'}, 'request_id': 'req_011CWpvHcNgaZzJnLoGP4cCQ'}",
+      "timestamp": "2026-01-05T16:11:59.033120"
+    },
+    {
+      "query_info": {
+        "query": "Phoenicia NY new live music venue 2024 2025",
+        "type": "new_venues",
+        "region": "Catskills",
+        "city": "Phoenicia",
+        "priority": 1
+      },
+      "text": "",
+      "success": false,
+      "error": "Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'invalid x-api-key'}, 'request_id': 'req_011CWpvHcfo1J8cngnCfSGU7'}",
+      "timestamp": "2026-01-05T16:11:59.149792"
+    },
+    {
+      "query_info": {
+        "query": "Phoenicia NY venues looking for musicians",
+        "type": "booking_opportunities",
+        "region": "Catskills",
+        "city": "Phoenicia",
+        "priority": 1
+      },
+      "text": "",
+      "success": false,
+      "error": "Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'invalid x-api-key'}, 'request_id': 'req_011CWpvHdAZ8uLnvQSyBespi'}",
+      "timestamp": "2026-01-05T16:11:59.217051"
+    },
+    {
+      "query_info": {
+        "query": "Margaretville NY new live music venue 2024 2025",
+        "type": "new_venues",
+        "region": "Catskills",
+        "city": "Margaretville",
+        "priority": 1
+      },
+      "text": "",
+      "success": false,
+      "error": "Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'invalid x-api-key'}, 'request_id': 'req_011CWpvHdX94GBoVDzNEzBms'}",
+      "timestamp": "2026-01-05T16:11:59.345291"
+    },
+    {
+      "query_info": {
+        "query": "Margaretville NY venues looking for musicians",
+        "type": "booking_opportunities",
+        "region": "Catskills",
+        "city": "Margaretville",
+        "priority": 1
+      },
+      "text": "",
+      "success": false,
+      "error": "Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'invalid x-api-key'}, 'request_id': 'req_011CWpvHe9bNvr7XYo54mWt8'}",
+      "timestamp": "2026-01-05T16:11:59.467176"
+    },
+    {
+      "query_info": {
+        "query": "Tannersville NY new live music venue 2024 2025",
+        "type": "new_venues",
+        "region": "Catskills",
+        "city": "Tannersville",
+        "priority": 1
+      },
+      "text": "",
+      "success": false,
+      "error": "Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'invalid x-api-key'}, 'request_id': 'req_011CWpvHedry5g9XH9HxDT4J'}",
+      "timestamp": "2026-01-05T16:11:59.598165"
+    },
+    {
+      "query_info": {
+        "query": "Tannersville NY venues looking for musicians",
+        "type": "booking_opportunities",
+        "region": "Catskills",
+        "city": "Tannersville",
+        "priority": 1
+      },
+      "text": "",
+      "success": false,
+      "error": "Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'invalid x-api-key'}, 'request_id': 'req_011CWpvHf69PWNCWfAENAiEW'}",
+      "timestamp": "2026-01-05T16:11:59.678251"
+    },
+    {
+      "query_info": {
+        "query": "Albany NY new live music venue 2024 2025",
+        "type": "new_venues",
+        "region": "Capital District",
+        "city": "Albany",
+        "priority": 2
+      },
+      "text": "",
+      "success": false,
+      "error": "Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'invalid x-api-key'}, 'request_id': 'req_011CWpvHfXwJzHjaonQPW5WK'}",
+      "timestamp": "2026-01-05T16:11:59.789787"
+    },
+    {
+      "query_info": {
+        "query": "Albany NY venues looking for musicians",
+        "type": "booking_opportunities",
+        "region": "Capital District",
+        "city": "Albany",
+        "priority": 2
+      },
+      "text": "",
+      "success": false,
+      "error": "Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'invalid x-api-key'}, 'request_id': 'req_011CWpvHfu1hAo95e6mcbF9H'}",
+      "timestamp": "2026-01-05T16:11:59.856960"
+    },
+    {
+      "query_info": {
+        "query": "Saratoga Springs NY new live music venue 2024 2025",
+        "type": "new_venues",
+        "region": "Capital District",
+        "city": "Saratoga Springs",
+        "priority": 2
+      },
+      "text": "",
+      "success": false,
+      "error": "Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'invalid x-api-key'}, 'request_id': 'req_011CWpvHgCs5SysVdyvysUEA'}",
+      "timestamp": "2026-01-05T16:11:59.930311"
+    }
+  ]
+}

@@ -2,13 +2,40 @@
 """
 Venue Scout - Claude API Integration
 
+⚠️  DEPRECATION NOTICE ⚠️
+This script is deprecated and maintained for backward compatibility only.
+Please use unified_search.py for multi-provider support (Claude, OpenRouter, Ollama, MCP).
+
+  New usage:
+    python unified_search.py --daily                    # Use configured provider
+    python unified_search.py --daily --provider claude  # Force Claude
+
 Executes venue searches using Claude API with web search capability.
 Requires: ANTHROPIC_API_KEY environment variable
 
-Usage:
+Legacy usage:
     python claude_search.py --daily       # Run daily searches via Claude
     python claude_search.py --query "..."  # Single query
 """
+
+import warnings
+
+warnings.warn(
+    "\n" + "="*60 + "\n"
+    "DEPRECATION WARNING:\n"
+    "claude_search.py is deprecated. Please use unified_search.py instead.\n"
+    "\n"
+    "Benefits of unified_search.py:\n"
+    "  - Support for multiple providers (Claude, OpenRouter, Ollama, MCP)\n"
+    "  - Automatic fallback if primary provider fails\n"
+    "  - Lower costs with free/local options\n"
+    "\n"
+    "Migration:\n"
+    "  python unified_search.py --daily --provider claude\n"
+    "="*60 + "\n",
+    DeprecationWarning,
+    stacklevel=2
+)
 
 import os
 import sys

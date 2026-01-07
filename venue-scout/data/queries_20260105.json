@@ -1,0 +1,146 @@
+{
+  "date": "2026-01-05T16:08:56.369380",
+  "queries": [
+    {
+      "query": "Kingston NY new live music venue 2024 2025",
+      "type": "new_venues",
+      "region": "Hudson Valley",
+      "city": "Kingston",
+      "priority": 1
+    },
+    {
+      "query": "Kingston NY brewery taproom live music",
+      "type": "new_venues",
+      "region": "Hudson Valley",
+      "city": "Kingston",
+      "priority": 1
+    },
+    {
+      "query": "Kingston NY live music venues",
+      "type": "existing_venues",
+      "region": "Hudson Valley",
+      "city": "Kingston",
+      "priority": 1
+    },
+    {
+      "query": "Kingston NY jazz clubs",
+      "type": "existing_venues",
+      "region": "Hudson Valley",
+      "city": "Kingston",
+      "priority": 1
+    },
+    {
+      "query": "Kingston NY venues looking for musicians",
+      "type": "booking_opportunities",
+      "region": "Hudson Valley",
+      "city": "Kingston",
+      "priority": 1
+    },
+    {
+      "query": "Hudson Valley NY booking live music",
+      "type": "booking_opportunities",
+      "region": "Hudson Valley",
+      "city": "Kingston",
+      "priority": 1
+    },
+    {
+      "query": "Poughkeepsie NY new live music venue 2024 2025",
+      "type": "new_venues",
+      "region": "Hudson Valley",
+      "city": "Poughkeepsie",
+      "priority": 1
+    },
+    {
+      "query": "Poughkeepsie NY brewery taproom live music",
+      "type": "new_venues",
+      "region": "Hudson Valley",
+      "city": "Poughkeepsie",
+      "priority": 1
+    },
+    {
+      "query": "Poughkeepsie NY live music venues",
+      "type": "existing_venues",
+      "region": "Hudson Valley",
+      "city": "Poughkeepsie",
+      "priority": 1
+    },
+    {
+      "query": "Poughkeepsie NY jazz clubs",
+      "type": "existing_venues",
+      "region": "Hudson Valley",
+      "city": "Poughkeepsie",
+      "priority": 1
+    },
+    {
+      "query": "Poughkeepsie NY venues looking for musicians",
+      "type": "booking_opportunities",
+      "region": "Hudson Valley",
+      "city": "Poughkeepsie",
+      "priority": 1
+    },
+    {
+      "query": "Hudson Valley NY booking live music",
+      "type": "booking_opportunities",
+      "region": "Hudson Valley",
+      "city": "Poughkeepsie",
+      "priority": 1
+    },
+    {
+      "query": "Woodstock NY new live music venue 2024 2025",
+      "type": "new_venues",
+      "region": "Hudson Valley",
+      "city": "Woodstock",
+      "priority": 1
+    },
+    {
+      "query": "Woodstock NY brewery taproom live music",
+      "type": "new_venues",
+      "region": "Hudson Valley",
+      "city": "Woodstock",
+      "priority": 1
+    },
+    {
+      "query": "Woodstock NY live music venues",
+      "type": "existing_venues",
+      "region": "Hudson Valley",
+      "city": "Woodstock",
+      "priority": 1
+    },
+    {
+      "query": "Woodstock NY jazz clubs",
+      "type": "existing_venues",
+      "region": "Hudson Valley",
+      "city": "Woodstock",
+      "priority": 1
+    },
+    {
+      "query": "Woodstock NY venues looking for musicians",
+      "type": "booking_opportunities",
+      "region": "Hudson Valley",
+      "city": "Woodstock",
+      "priority": 1
+    },
+    {
+      "query": "Hudson Valley NY booking live music",
+      "type": "booking_opportunities",
+      "region": "Hudson Valley",
+      "city": "Woodstock",
+      "priority": 1
+    },
+    {
+      "query": "New Paltz NY new live music venue 2024 2025",
+      "type": "new_venues",
+      "region": "Hudson Valley",
+      "city": "New Paltz",
+      "priority": 1
+    },
+    {
+      "query": "New Paltz NY brewery taproom live music",
+      "type": "new_venues",
+      "region": "Hudson Valley",
+      "city": "New Paltz",
+      "priority": 1
+    }
+  ],
+  "instructions": "\nTo run these searches:\n1. Use web search tool with each query\n2. Parse results for venue information\n3. Run: python venue_scout.py --process-results <results_file>\n\nFor automated daily runs, integrate with:\n- Claude API for search execution\n- Cron job for scheduling\n- Email/Slack for alert notifications\n"
+}

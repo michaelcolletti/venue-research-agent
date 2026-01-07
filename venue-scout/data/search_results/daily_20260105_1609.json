@@ -1,0 +1,202 @@
+{
+  "date": "2026-01-05T16:09:26.907323",
+  "queries_run": 15,
+  "successful": 0,
+  "results": [
+    {
+      "query_info": {
+        "query": "Kingston NY new live music venue 2024 2025",
+        "type": "new_venues",
+        "region": "Hudson Valley",
+        "city": "Kingston",
+        "priority": 1
+      },
+      "text": "",
+      "success": false,
+      "error": "Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011CWpv6H5mFKCHnBEQ9ZGwm'}",
+      "timestamp": "2026-01-05T16:09:25.304569"
+    },
+    {
+      "query_info": {
+        "query": "Kingston NY venues looking for musicians",
+        "type": "booking_opportunities",
+        "region": "Hudson Valley",
+        "city": "Kingston",
+        "priority": 1
+      },
+      "text": "",
+      "success": false,
+      "error": "Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011CWpv6HQcCVg3CFfRLRtxb'}",
+      "timestamp": "2026-01-05T16:09:25.374391"
+    },
+    {
+      "query_info": {
+        "query": "Poughkeepsie NY new live music venue 2024 2025",
+        "type": "new_venues",
+        "region": "Hudson Valley",
+        "city": "Poughkeepsie",
+        "priority": 1
+      },
+      "text": "",
+      "success": false,
+      "error": "Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011CWpv6HmgmNFkL8EPCUrKg'}",
+      "timestamp": "2026-01-05T16:09:25.463686"
+    },
+    {
+      "query_info": {
+        "query": "Poughkeepsie NY venues looking for musicians",
+        "type": "booking_opportunities",
+        "region": "Hudson Valley",
+        "city": "Poughkeepsie",
+        "priority": 1
+      },
+      "text": "",
+      "success": false,
+      "error": "Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011CWpv6J72g3gigNSfzNkWX'}",
+      "timestamp": "2026-01-05T16:09:25.544586"
+    },
+    {
+      "query_info": {
+        "query": "Woodstock NY new live music venue 2024 2025",
+        "type": "new_venues",
+        "region": "Hudson Valley",
+        "city": "Woodstock",
+        "priority": 1
+      },
+      "text": "",
+      "success": false,
+      "error": "Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011CWpv6JTMzBdHhc5xGQp38'}",
+      "timestamp": "2026-01-05T16:09:25.708095"
+    },
+    {
+      "query_info": {
+        "query": "Woodstock NY venues looking for musicians",
+        "type": "booking_opportunities",
+        "region": "Hudson Valley",
+        "city": "Woodstock",
+        "priority": 1
+      },
+      "text": "",
+      "success": false,
+      "error": "Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011CWpv6K9HeJqqCwEVuLnxq'}",
+      "timestamp": "2026-01-05T16:09:25.792145"
+    },
+    {
+      "query_info": {
+        "query": "Phoenicia NY new live music venue 2024 2025",
+        "type": "new_venues",
+        "region": "Catskills",
+        "city": "Phoenicia",
+        "priority": 1
+      },
+      "text": "",
+      "success": false,
+      "error": "Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011CWpv6KX74rVbVJLpHK761'}",
+      "timestamp": "2026-01-05T16:09:25.885337"
+    },
+    {
+      "query_info": {
+        "query": "Phoenicia NY venues looking for musicians",
+        "type": "booking_opportunities",
+        "region": "Catskills",
+        "city": "Phoenicia",
+        "priority": 1
+      },
+      "text": "",
+      "success": false,
+      "error": "Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011CWpv6KuRqKy5HGvMrxT9R'}",
+      "timestamp": "2026-01-05T16:09:26.052747"
+    },
+    {
+      "query_info": {
+        "query": "Margaretville NY new live music venue 2024 2025",
+        "type": "new_venues",
+        "region": "Catskills",
+        "city": "Margaretville",
+        "priority": 1
+      },
+      "text": "",
+      "success": false,
+      "error": "Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011CWpv6LcqUdY47t7d3hUbB'}",
+      "timestamp": "2026-01-05T16:09:26.146619"
+    },
+    {
+      "query_info": {
+        "query": "Margaretville NY venues looking for musicians",
+        "type": "booking_opportunities",
+        "region": "Catskills",
+        "city": "Margaretville",
+        "priority": 1
+      },
+      "text": "",
+      "success": false,
+      "error": "Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011CWpv6M1u2wiLiRE7sGvLn'}",
+      "timestamp": "2026-01-05T16:09:26.218562"
+    },
+    {
+      "query_info": {
+        "query": "Tannersville NY new live music venue 2024 2025",
+        "type": "new_venues",
+        "region": "Catskills",
+        "city": "Tannersville",
+        "priority": 1
+      },
+      "text": "",
+      "success": false,
+      "error": "Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011CWpv6MRDEQEdP9nyV8CgX'}",
+      "timestamp": "2026-01-05T16:09:26.334130"
+    },
+    {
+      "query_info": {
+        "query": "Tannersville NY venues looking for musicians",
+        "type": "booking_opportunities",
+        "region": "Catskills",
+        "city": "Tannersville",
+        "priority": 1
+      },
+      "text": "",
+      "success": false,
+      "error": "Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011CWpv6Mq1pEqrnPa2MzW8r'}",
+      "timestamp": "2026-01-05T16:09:26.420115"
+    },
+    {
+      "query_info": {
+        "query": "Albany NY new live music venue 2024 2025",
+        "type": "new_venues",
+        "region": "Capital District",
+        "city": "Albany",
+        "priority": 2
+      },
+      "text": "",
+      "success": false,
+      "error": "Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011CWpv6NArRvWTc4dHy6Svg'}",
+      "timestamp": "2026-01-05T16:09:26.496682"
+    },
+    {
+      "query_info": {
+        "query": "Albany NY venues looking for musicians",
+        "type": "booking_opportunities",
+        "region": "Capital District",
+        "city": "Albany",
+        "priority": 2
+      },
+      "text": "",
+      "success": false,
+      "error": "Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011CWpv6NWh1oDZasTjvRMpY'}",
+      "timestamp": "2026-01-05T16:09:26.832089"
+    },
+    {
+      "query_info": {
+        "query": "Saratoga Springs NY new live music venue 2024 2025",
+        "type": "new_venues",
+        "region": "Capital District",
+        "city": "Saratoga Springs",
+        "priority": 2
+      },
+      "text": "",
+      "success": false,
+      "error": "Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011CWpv6PwGStgFTHoCiHWCQ'}",
+      "timestamp": "2026-01-05T16:09:26.906748"
+    }
+  ]
+}
